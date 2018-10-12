@@ -29,6 +29,12 @@ public class PlayerController : MonoBehaviour {
         CurserControll();
         Shoot();
 
+        if (this.transform.rotation.x != 0 && this.transform.rotation.z != 0) {
+
+            
+
+        }
+
     }
 
     void Movement() {
