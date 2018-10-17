@@ -9,14 +9,16 @@ public class PlayerController : MonoBehaviour {
     public GameObject Curser;
     public GameObject Bullet;
     public Text ammoText;
-    public Vector3 CurserVec = new Vector3(0, -5, 0);
+    public Vector3 CurserVec;
     public int ammo = 6;
     private bool paused;
 
     // Use this for initialization
     void Start () {
 
+        CurserVec = new Vector3(this.transform.position.x + 10, this.transform.position.y - 0.5f, this.transform.position.z);
         Instantiate(Curser, CurserVec, transform.rotation);
+        //ammoText = 
 
 	}
 	
@@ -39,8 +41,8 @@ public class PlayerController : MonoBehaviour {
 
     void Movement() {
 
-        float moveH = Input.GetAxis("Horizontal") * Time.deltaTime;
-        float moveV = Input.GetAxis("Vertical") * Time.deltaTime;
+        float moveH = Input.GetAxis("Horizontal1") * Time.deltaTime;
+        float moveV = Input.GetAxis("Vertical1") * Time.deltaTime;
 
         this.transform.Translate((moveH * moveSpeed), 0, (moveV * moveSpeed));
 
@@ -52,6 +54,11 @@ public class PlayerController : MonoBehaviour {
 
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
+
+        float moveH2 = Input.GetAxis("Horizontal1-2") * Time.deltaTime;
+        float moveV2 = Input.GetAxis("Vertical1-2") * Time.deltaTime;
+
+        GameObject.Find("Curser(Clone)").transform.Translate((moveH2 * moveSpeed), 0, (moveV2 * moveSpeed));
 
         if (Physics.Raycast(ray, out hit, 100, layerMask)) {
 
@@ -68,7 +75,7 @@ public class PlayerController : MonoBehaviour {
 
         float thrust = 25;
 
-        if (Input.GetButtonDown("Fire1") && ammo > 0 && paused == false) {
+        if (Input.GetButtonDown("Shoot1") && ammo > 0 && paused == false) {
 
             ammo--;
             Instantiate(Bullet, GameObject.Find("Player").transform);
