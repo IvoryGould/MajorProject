@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour {
 
-    int passCount = 0;
+    int passCount = 0; 
 
 	// Use this for initialization
 	void Start () {

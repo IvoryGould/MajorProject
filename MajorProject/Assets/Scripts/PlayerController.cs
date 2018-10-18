@@ -6,19 +6,33 @@ using UnityEngine.UI;
 public class PlayerController : MonoBehaviour {
 
     float moveSpeed = 5;
+    float rotSpeed = 10;
     public GameObject Curser;
     public GameObject Bullet;
     public Text ammoText;
+    public Text healthText;
     public Vector3 CurserVec;
     public int ammo = 6;
+    public int health = 6;
     private bool paused;
 
     // Use this for initialization
     void Start () {
 
-        CurserVec = new Vector3(this.transform.position.x + 10, this.transform.position.y - 0.5f, this.transform.position.z);
-        Instantiate(Curser, CurserVec, transform.rotation);
-        //ammoText = 
+
+        if (this.gameObject.tag == "P1") {
+
+            CurserVec = new Vector3(this.transform.position.x + 10, this.transform.position.y - 0.5f, this.transform.position.z);
+
+        } else if (this.gameObject.tag == "P2") {
+
+            CurserVec = new Vector3(this.transform.position.x - 10, this.transform.position.y - 0.5f, this.transform.position.z);
+
+        }
+        Instantiate(Curser, CurserVec, transform.rotation, this.transform);
+        CurserBS();
+        ammoText = GameObject.Find(this.gameObject.tag + "ammo").GetComponent<Text>();
+        healthText = GameObject.Find(this.gameObject.tag + "life").GetComponent<Text>();
 
 	}
 	
@@ -26,6 +40,7 @@ public class PlayerController : MonoBehaviour {
 	void Update () {
 
         ammoText.text = ammo.ToString();
+        healthText.text = health.ToString();
 
         Movement();
         CurserControll();
@@ -41,10 +56,10 @@ public class PlayerController : MonoBehaviour {
 
     void Movement() {
 
-        float moveH = Input.GetAxis("Horizontal1") * Time.deltaTime;
-        float moveV = Input.GetAxis("Vertical1") * Time.deltaTime;
+        float moveH = Input.GetAxis("Horizontal" + this.gameObject.tag) * Time.deltaTime;
+        float moveV = Input.GetAxis("Vertical" + this.gameObject.tag) * Time.deltaTime;
 
-        this.transform.Translate((moveH * moveSpeed), 0, (moveV * moveSpeed));
+        this.transform.Translate((moveV * moveSpeed), 0, (moveH * moveSpeed));
 
     }
 
@@ -55,17 +70,19 @@ public class PlayerController : MonoBehaviour {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
 
-        float moveH2 = Input.GetAxis("Horizontal1-2") * Time.deltaTime;
-        float moveV2 = Input.GetAxis("Vertical1-2") * Time.deltaTime;
+        float moveH2 = Input.GetAxis("Horizontal" + this.gameObject.tag + "-2") * Time.deltaTime;
+        float moveV2 = Input.GetAxis("Vertical" + this.gameObject.tag + "-2") * Time.deltaTime;
 
-        GameObject.Find("Curser(Clone)").transform.Translate((moveH2 * moveSpeed), 0, (moveV2 * moveSpeed));
+        GameObject.Find("Curser" + this.gameObject.tag).transform.Translate((moveH2 * rotSpeed), 0, (moveV2 * rotSpeed));
+
+        this.transform.LookAt(GameObject.Find("Curser" + this.gameObject.tag).transform);
 
         if (Physics.Raycast(ray, out hit, 100, layerMask)) {
 
             Debug.DrawLine(ray.origin, hit.point, Color.red);
-            Debug.DrawLine(GameObject.Find("Player").transform.position, hit.point, Color.blue, 2);
-            GameObject.Find("Curser(Clone)").transform.position = hit.point;
-            this.transform.LookAt(GameObject.Find("Curser(Clone)").transform);
+            Debug.DrawLine(this.transform.position, hit.point, Color.blue, 2);
+            GameObject.Find("Curser" + this.gameObject.tag).transform.position = hit.point;
+            this.transform.LookAt(GameObject.Find("Curser" + this.gameObject.tag).transform);
 
         }
 
@@ -75,15 +92,15 @@ public class PlayerController : MonoBehaviour {
 
         float thrust = 25;
 
-        if (Input.GetButtonDown("Shoot1") && ammo > 0 && paused == false) {
+        if (Input.GetButtonDown("Shoot" + this.gameObject.tag) && ammo > 0 && paused == false) {
 
             ammo--;
-            Instantiate(Bullet, GameObject.Find("Player").transform);
-            GameObject.Find("Player").transform.Find("Bullet(Clone)").transform.SetParent(GameObject.Find("WorldPoint").transform);
+            Instantiate(Bullet, this.transform);
+            this.transform.Find("Bullet(Clone)").transform.SetParent(GameObject.Find("WorldPoint").transform);
 
             GameObject.Find("WorldPoint").transform.Find("Bullet(Clone)").name = "Bullet" + GameObject.Find("WorldPoint").transform.Find("Bullet(Clone)").transform.GetSiblingIndex().ToString();
 
-            GameObject.Find("WorldPoint").transform.Find("Bullet" + (GameObject.Find("WorldPoint").transform.childCount - 1)).transform.position = new Vector3(GameObject.Find("Player").transform.position.x + 1, GameObject.Find("Player").transform.position.y, GameObject.Find("Player").transform.position.z);
+            GameObject.Find("WorldPoint").transform.Find("Bullet" + (GameObject.Find("WorldPoint").transform.childCount - 1)).transform.position = this.gameObject.transform.GetChild(0).transform.position;
             GameObject.Find("WorldPoint").transform.Find("Bullet" + (GameObject.Find("WorldPoint").transform.childCount - 1)).GetComponent<Rigidbody>().AddForce(transform.forward * thrust, ForceMode.Impulse);
             
         }
@@ -98,8 +115,7 @@ public class PlayerController : MonoBehaviour {
 
     IEnumerator ReloadTimer() {
 
-        while (ammo < 6)
-        {
+        while (ammo < 6) {
 
             paused = true;
             ammo++;
@@ -110,5 +126,12 @@ public class PlayerController : MonoBehaviour {
         paused = false;
 
     }
- 
+
+    void CurserBS() {
+
+        this.transform.Find("Curser(Clone)").name = "Curser" + this.gameObject.tag;
+        this.transform.Find("Curser" + this.gameObject.tag).transform.SetParent(GameObject.Find("WorldPoint").transform);
+
+    }
+
 }
