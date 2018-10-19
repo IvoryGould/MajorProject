@@ -19,7 +19,6 @@ public class PlayerController : MonoBehaviour {
     // Use this for initialization
     void Start () {
 
-
         if (this.gameObject.tag == "P1") {
 
             CurserVec = new Vector3(this.transform.position.x + 10, this.transform.position.y - 0.5f, this.transform.position.z);
@@ -77,14 +76,14 @@ public class PlayerController : MonoBehaviour {
 
         this.transform.LookAt(GameObject.Find("Curser" + this.gameObject.tag).transform);
 
-        if (Physics.Raycast(ray, out hit, 100, layerMask)) {
+        /*if (Physics.Raycast(ray, out hit, 100, layerMask)) {
 
             Debug.DrawLine(ray.origin, hit.point, Color.red);
             Debug.DrawLine(this.transform.position, hit.point, Color.blue, 2);
             GameObject.Find("Curser" + this.gameObject.tag).transform.position = hit.point;
             this.transform.LookAt(GameObject.Find("Curser" + this.gameObject.tag).transform);
 
-        }
+        }*/
 
     }
 
