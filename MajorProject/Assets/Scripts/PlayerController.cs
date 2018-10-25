@@ -5,10 +5,11 @@ using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour {
 
-    float moveSpeed = 5;
-    float rotSpeed = 10;
+    public float moveSpeed = 5;
+    public float rotSpeed = 10;
     public GameObject Curser;
     public GameObject Bullet;
+    public GameObject gameOverPanel;
     public Text ammoText;
     public Text healthText;
     public Vector3 CurserVec;
@@ -32,6 +33,7 @@ public class PlayerController : MonoBehaviour {
         CurserBS();
         ammoText = GameObject.Find(this.gameObject.tag + "ammo").GetComponent<Text>();
         healthText = GameObject.Find(this.gameObject.tag + "life").GetComponent<Text>();
+        gameOverPanel = GameObject.Find("Canvas").transform.Find("GameOverPanel").gameObject;
 
 	}
 	
@@ -130,6 +132,29 @@ public class PlayerController : MonoBehaviour {
 
         this.transform.Find("Curser(Clone)").name = "Curser" + this.gameObject.tag;
         this.transform.Find("Curser" + this.gameObject.tag).transform.SetParent(GameObject.Find("WorldPoint").transform);
+
+    }
+
+    private void OnCollisionEnter(Collision collision) {
+
+        if (collision.collider.tag == "Bullet") {
+
+            health--;
+            Destroy(collision.gameObject);
+            Death();
+
+        }
+
+    }
+
+    void Death() {
+
+        if (health == 0) {
+
+            Time.timeScale = 0.0f;
+            gameOverPanel.SetActive(true);
+
+        }
 
     }
 
