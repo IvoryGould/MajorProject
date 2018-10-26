@@ -298,8 +298,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Bullet.cs" />
+    <Compile Include="Assets\Scripts\Collectable.cs" />
+    <Compile Include="Assets\Scripts\CollectableSpawner.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\Shotgun.cs" />
+    <Compile Include="Assets\Scripts\SpawnTrain.cs" />
     <Compile Include="Assets\Scripts\StateManager.cs" />
     <Compile Include="Assets\Scripts\Train.cs" />
   </ItemGroup>

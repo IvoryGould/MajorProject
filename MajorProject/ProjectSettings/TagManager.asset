@@ -8,6 +8,8 @@ TagManager:
   - DELETEWALL
   - P1
   - P2
+  - TrainDeleter
+  - DATRAINKILLEDMEH
   layers:
   - Default
   - TransparentFX

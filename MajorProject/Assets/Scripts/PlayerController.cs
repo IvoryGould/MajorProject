@@ -7,14 +7,20 @@ public class PlayerController : MonoBehaviour {
 
     public float moveSpeed = 5;
     public float rotSpeed = 10;
+    public float thrust = 25;
+
     public GameObject Curser;
     public GameObject Bullet;
     public GameObject gameOverPanel;
+
     public Text ammoText;
     public Text healthText;
+
     public Vector3 CurserVec;
+
     public int ammo = 6;
     public int health = 6;
+
     private bool paused;
 
     // Use this for initialization
@@ -66,10 +72,10 @@ public class PlayerController : MonoBehaviour {
 
     void CurserControll() {
 
-        int layerMask = 1 << 9;
+        //int layerMask = 1 << 9;
 
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        RaycastHit hit;
+        //RaycastHit hit;
 
         float moveH2 = Input.GetAxis("Horizontal" + this.gameObject.tag + "-2") * Time.deltaTime;
         float moveV2 = Input.GetAxis("Vertical" + this.gameObject.tag + "-2") * Time.deltaTime;
@@ -91,7 +97,7 @@ public class PlayerController : MonoBehaviour {
 
     void Shoot() {
 
-        float thrust = 25;
+        
 
         if (Input.GetButtonDown("Shoot" + this.gameObject.tag) && ammo > 0 && paused == false) {
 
@@ -141,6 +147,13 @@ public class PlayerController : MonoBehaviour {
 
             health--;
             Destroy(collision.gameObject);
+            Death();
+
+        }
+
+        if (collision.collider.tag == "DATRAINKILLEDMEH") {
+
+            health = 0;
             Death();
 
         }
