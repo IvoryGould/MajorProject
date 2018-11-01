@@ -10,6 +10,7 @@ TagManager:
   - P2
   - TrainDeleter
   - DATRAINKILLEDMEH
+  - Collectable
   layers:
   - Default
   - TransparentFX
