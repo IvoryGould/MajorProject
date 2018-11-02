@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour {
     public float moveSpeed = 5;
     public float rotSpeed = 10;
     public float thrust = 25;
+    public float fireRateMultiplyer = 0.5f;
 
     public GameObject Curser;
     public GameObject Bullet;
@@ -109,7 +110,9 @@ public class PlayerController : MonoBehaviour {
 
             GameObject.Find("WorldPoint").transform.Find("Bullet" + (GameObject.Find("WorldPoint").transform.childCount - 1)).transform.position = this.gameObject.transform.GetChild(0).transform.position;
             GameObject.Find("WorldPoint").transform.Find("Bullet" + (GameObject.Find("WorldPoint").transform.childCount - 1)).GetComponent<Rigidbody>().AddForce(transform.forward * thrust, ForceMode.Impulse);
-            
+
+            StartCoroutine(FireRate(fireRateMultiplyer));
+
         }
 
         if (ammo == 0) {
@@ -117,6 +120,13 @@ public class PlayerController : MonoBehaviour {
             StartCoroutine(ReloadTimer());
 
         }
+
+    }
+
+    IEnumerator FireRate(float fireRateMultiplyer) {
+
+        paused = true;
+        yield return new WaitForSecondsRealtime(fireRateMultiplyer);
 
     }
 
