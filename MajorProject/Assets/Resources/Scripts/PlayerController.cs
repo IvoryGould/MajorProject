@@ -51,7 +51,8 @@ public class PlayerController : MonoBehaviour {
         healthText.text = health.ToString();
 
         Movement();
-        CurserControll();
+        //CurserControll();
+        Rotation();
         Shoot();
 
         if (this.transform.rotation.x != 0 && this.transform.rotation.z != 0) {
@@ -71,30 +72,39 @@ public class PlayerController : MonoBehaviour {
 
     }
 
-    void CurserControll() {
-
-        //int layerMask = 1 << 9;
-
-        //Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        //RaycastHit hit;
+    void Rotation() {
 
         float moveH2 = Input.GetAxis("Horizontal" + this.gameObject.tag + "-2") * Time.deltaTime;
         float moveV2 = Input.GetAxis("Vertical" + this.gameObject.tag + "-2") * Time.deltaTime;
 
-        GameObject.Find("Curser" + this.gameObject.tag).transform.Translate((moveH2 * rotSpeed), 0, (moveV2 * rotSpeed));
-
-        this.transform.LookAt(GameObject.Find("Curser" + this.gameObject.tag).transform);
-
-        /*if (Physics.Raycast(ray, out hit, 100, layerMask)) {
-
-            Debug.DrawLine(ray.origin, hit.point, Color.red);
-            Debug.DrawLine(this.transform.position, hit.point, Color.blue, 2);
-            GameObject.Find("Curser" + this.gameObject.tag).transform.position = hit.point;
-            this.transform.LookAt(GameObject.Find("Curser" + this.gameObject.tag).transform);
-
-        }*/
+        this.transform.Rotate(0, moveH2*rotSpeed, 0);
 
     }
+
+    //void CurserControll() {
+
+    //    //int layerMask = 1 << 9;
+
+    //    //Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+    //    //RaycastHit hit;
+
+    //    float moveH2 = Input.GetAxis("Horizontal" + this.gameObject.tag + "-2") * Time.deltaTime;
+    //    float moveV2 = Input.GetAxis("Vertical" + this.gameObject.tag + "-2") * Time.deltaTime;
+
+    //    GameObject.Find("Curser" + this.gameObject.tag).transform.Translate((moveH2 * rotSpeed), 0, (moveV2 * rotSpeed));
+
+    //    this.transform.LookAt(GameObject.Find("Curser" + this.gameObject.tag).transform);
+
+    //    /*if (Physics.Raycast(ray, out hit, 100, layerMask)) {
+
+    //        Debug.DrawLine(ray.origin, hit.point, Color.red);
+    //        Debug.DrawLine(this.transform.position, hit.point, Color.blue, 2);
+    //        GameObject.Find("Curser" + this.gameObject.tag).transform.position = hit.point;
+    //        this.transform.LookAt(GameObject.Find("Curser" + this.gameObject.tag).transform);
+
+    //    }*/
+
+    //}
 
     void Shoot() {
 
@@ -127,6 +137,7 @@ public class PlayerController : MonoBehaviour {
 
         paused = true;
         yield return new WaitForSecondsRealtime(fireRateMultiplyer);
+        paused = false;
 
     }
 
