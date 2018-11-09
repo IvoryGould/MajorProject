@@ -305,6 +305,7 @@
     <Compile Include="Assets\Resources\Scripts\Shotgun.cs" />
     <Compile Include="Assets\Resources\Scripts\SpawnTrain.cs" />
     <Compile Include="Assets\Resources\Scripts\StateManager.cs" />
+    <Compile Include="Assets\Resources\Scripts\tester.cs" />
     <Compile Include="Assets\Resources\Scripts\Train.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

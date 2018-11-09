@@ -11,6 +11,8 @@ TagManager:
   - TrainDeleter
   - DATRAINKILLEDMEH
   - Collectable
+  - BtP1
+  - BtP2
   layers:
   - Default
   - TransparentFX

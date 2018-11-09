@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour {
 
-    int passCount = 0; 
+    //int passCount = 0; 
 
 	// Use this for initialization
 	void Start () {
@@ -25,18 +25,4 @@ public class Bullet : MonoBehaviour {
 
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.tag == "DELETEWALL" && passCount < 2) {
-
-            passCount++;
-
-        }
-
-        if (other.gameObject.tag == "DELETEWALL" && passCount == 2) {
-
-            Destroy(this.gameObject);
-
-        }
-    }
 }

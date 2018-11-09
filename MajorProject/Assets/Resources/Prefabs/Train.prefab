@@ -373,10 +373,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b0b20b4142fb0343b0d63e066e12b79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shotgun: {fileID: 1139466896221590, guid: 4341ab97012108041b5539003684baac, type: 2}
-  dualRevolver: {fileID: 1693282554584190, guid: 3847571bd2e43f741a832a95b52ef840,
-    type: 2}
-  bandage: {fileID: 1191227323816974, guid: c3698dd0303b9414abcb617436e8e766, type: 2}
+  collectables: []
 --- !u!114 &114549594145355300
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -388,10 +385,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b0b20b4142fb0343b0d63e066e12b79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shotgun: {fileID: 1139466896221590, guid: 4341ab97012108041b5539003684baac, type: 2}
-  dualRevolver: {fileID: 1693282554584190, guid: 3847571bd2e43f741a832a95b52ef840,
-    type: 2}
-  bandage: {fileID: 1191227323816974, guid: c3698dd0303b9414abcb617436e8e766, type: 2}
+  collectables: []
 --- !u!114 &114594454963859830
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -403,8 +397,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efe6ad3f86977184e89d5d7a51103995, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 10
-  timerNum: 5
+  moveSpeed: 17
+  timerMax: 20
 --- !u!114 &114728516106099134
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -416,7 +410,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b0b20b4142fb0343b0d63e066e12b79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shotgun: {fileID: 1139466896221590, guid: 4341ab97012108041b5539003684baac, type: 2}
-  dualRevolver: {fileID: 1693282554584190, guid: 3847571bd2e43f741a832a95b52ef840,
-    type: 2}
-  bandage: {fileID: 1191227323816974, guid: c3698dd0303b9414abcb617436e8e766, type: 2}
+  collectables: []

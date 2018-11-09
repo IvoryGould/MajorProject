@@ -12,12 +12,13 @@ public class PlayerController : MonoBehaviour {
 
     public GameObject Curser;
     public GameObject Bullet;
+    public GameObject Bullet2;
     public GameObject gameOverPanel;
 
     public Text ammoText;
     public Text healthText;
 
-    public Vector3 CurserVec;
+    public Vector3 bulletOffset;
 
     public int ammo = 6;
     public int health = 6;
@@ -29,15 +30,16 @@ public class PlayerController : MonoBehaviour {
 
         if (this.gameObject.tag == "P1") {
 
-            CurserVec = new Vector3(this.transform.position.x + 10, this.transform.position.y - 0.5f, this.transform.position.z);
+            bulletOffset = new Vector3(0, 1, 2);
 
         } else if (this.gameObject.tag == "P2") {
 
-            CurserVec = new Vector3(this.transform.position.x - 10, this.transform.position.y - 0.5f, this.transform.position.z);
+            bulletOffset = new Vector3(0, 1, -2);
 
         }
-        Instantiate(Curser, CurserVec, transform.rotation, this.transform);
-        CurserBS();
+
+        //Instantiate(Curser, CurserVec, transform.rotation, this.transform);
+        //CurserBS();
         ammoText = GameObject.Find(this.gameObject.tag + "ammo").GetComponent<Text>();
         healthText = GameObject.Find(this.gameObject.tag + "life").GetComponent<Text>();
         gameOverPanel = GameObject.Find("Canvas").transform.Find("GameOverPanel").gameObject;
@@ -65,17 +67,24 @@ public class PlayerController : MonoBehaviour {
 
     void Movement() {
 
+        float moveHD = Input.GetAxis("Horizontal" + this.gameObject.tag + "D") * Time.deltaTime;
+        float moveVD = Input.GetAxis("Vertical" + this.gameObject.tag + "D") * Time.deltaTime;
+
         float moveH = Input.GetAxis("Horizontal" + this.gameObject.tag) * Time.deltaTime;
         float moveV = Input.GetAxis("Vertical" + this.gameObject.tag) * Time.deltaTime;
 
-        this.transform.Translate((moveV * moveSpeed), 0, (moveH * moveSpeed));
+        this.transform.Translate(Vector3.forward * (moveHD * moveSpeed), Space.World);
+        this.transform.Translate(Vector3.right * (moveVD * moveSpeed), Space.World);
+
+        this.transform.Translate(Vector3.forward * (moveH * moveSpeed), Space.World);
+        this.transform.Translate(Vector3.right * (moveV * moveSpeed), Space.World);
 
     }
 
     void Rotation() {
 
         float moveH2 = Input.GetAxis("Horizontal" + this.gameObject.tag + "-2") * Time.deltaTime;
-        float moveV2 = Input.GetAxis("Vertical" + this.gameObject.tag + "-2") * Time.deltaTime;
+        //float moveV2 = Input.GetAxis("Vertical" + this.gameObject.tag + "-2") * Time.deltaTime;
 
         this.transform.Rotate(0, moveH2*rotSpeed, 0);
 
@@ -113,15 +122,22 @@ public class PlayerController : MonoBehaviour {
         if (Input.GetButtonDown("Shoot" + this.gameObject.tag) && ammo > 0 && paused == false) {
 
             ammo--;
-            Instantiate(Bullet, this.transform);
-            this.transform.Find("Bullet(Clone)").transform.SetParent(GameObject.Find("WorldPoint").transform);
 
-            GameObject.Find("WorldPoint").transform.Find("Bullet(Clone)").name = "Bullet" + GameObject.Find("WorldPoint").transform.Find("Bullet(Clone)").transform.GetSiblingIndex().ToString();
 
-            GameObject.Find("WorldPoint").transform.Find("Bullet" + (GameObject.Find("WorldPoint").transform.childCount - 1)).transform.position = this.gameObject.transform.GetChild(0).transform.position;
-            GameObject.Find("WorldPoint").transform.Find("Bullet" + (GameObject.Find("WorldPoint").transform.childCount - 1)).GetComponent<Rigidbody>().AddForce(transform.forward * thrust, ForceMode.Impulse);
+            if (this.gameObject.tag == "P1") {
 
-            StartCoroutine(FireRate(fireRateMultiplyer));
+                Instantiate(Bullet, transform.position + bulletOffset, Quaternion.identity);
+
+            }
+            else if (this.gameObject.tag == "P2") {
+
+                Instantiate(Bullet2, transform.position + bulletOffset, Quaternion.identity);
+
+            }
+
+            //.GetComponent<Rigidbody>().AddForce(transform.forward * thrust, ForceMode.Impulse);
+
+            //StartCoroutine(FireRate(fireRateMultiplyer));
 
         }
 
@@ -133,13 +149,13 @@ public class PlayerController : MonoBehaviour {
 
     }
 
-    IEnumerator FireRate(float fireRateMultiplyer) {
+    //IEnumerator FireRate(float fireRateMultiplyer) {
 
-        paused = true;
-        yield return new WaitForSecondsRealtime(fireRateMultiplyer);
-        paused = false;
+    //    paused = true;
+    //    yield return new WaitForSecondsRealtime(fireRateMultiplyer);
+    //    paused = false;
 
-    }
+    //}
 
     IEnumerator ReloadTimer() {
 
@@ -155,16 +171,18 @@ public class PlayerController : MonoBehaviour {
 
     }
 
-    void CurserBS() {
+    //void CurserBS() {
 
-        this.transform.Find("Curser(Clone)").name = "Curser" + this.gameObject.tag;
-        this.transform.Find("Curser" + this.gameObject.tag).transform.SetParent(GameObject.Find("WorldPoint").transform);
+    //    this.transform.Find("Curser(Clone)").name = "Curser" + this.gameObject.tag;
+    //    this.transform.Find("Curser" + this.gameObject.tag).transform.SetParent(GameObject.Find("WorldPoint").transform);
 
-    }
+    //}
 
-    private void OnCollisionEnter(Collision collision) {
+    private void OnCollisionEnter(Collision collision)
+    {
 
-        if (collision.collider.tag == "Bullet") {
+        if (collision.collider.tag == "Bullet")
+        {
 
             health--;
             Destroy(collision.gameObject);
@@ -172,7 +190,8 @@ public class PlayerController : MonoBehaviour {
 
         }
 
-        if (collision.collider.tag == "DATRAINKILLEDMEH") {
+        if (collision.collider.tag == "DATRAINKILLEDMEH")
+        {
 
             health = 0;
             Death();

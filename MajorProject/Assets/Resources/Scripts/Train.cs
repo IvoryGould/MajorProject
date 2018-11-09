@@ -5,15 +5,19 @@ using UnityEngine;
 public class Train : MonoBehaviour {
 
     public float moveSpeed = 5;
-    public float timerNum = 5;
+    float timerNum;
+    public float timerMax = 20;
 
     void Awake() {
+
+
 
     }
 
     // Use this for initialization
     void Start () {
 
+        timerNum = Random.Range(6, timerMax);
 
     }
 	
