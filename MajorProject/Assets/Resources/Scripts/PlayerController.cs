@@ -7,39 +7,70 @@ public class PlayerController : MonoBehaviour {
 
     public float moveSpeed = 5;
     public float rotSpeed = 10;
-    public float thrust = 25;
     public float fireRateMultiplyer = 0.5f;
+    public float rapidFireModifier = 0.25f;
 
     public GameObject Curser;
     public GameObject Bullet;
-    public GameObject Bullet2;
     public GameObject gameOverPanel;
+
+    public Transform p1gunMid;
+    public Transform p1gunLeft;
+    public Transform p1gunRight;
+
+    public Transform p2gunMid;
+    public Transform p2gunLeft;
+    public Transform p2gunRight;
 
     public Text ammoText;
     public Text healthText;
 
-    public Vector3 bulletOffset;
+    public Vector3 bulletOffsetMid;
+    public Vector3 bulletOffsetLeft;
+    public Vector3 bulletOffsetRight;
+
+    Quaternion _bulletRotation;
+    Quaternion _bulletRotationRight;
+
 
     public int ammo = 6;
     public int health = 6;
+    int currentBulletIdx;
 
-    private bool paused;
+    public bool isReloading = false;
+
+    private bool revPaused;
+    private bool shotPaused;
+
+    public bool revolverActive = true;
+    public bool shotgunActive = false;
+    public bool runShotgun = false;
+    public bool dontDo = false;
+    public bool hasPickUp = false;
+
+    public List<GameObject> _bullets;
 
     // Use this for initialization
     void Start () {
 
         if (this.gameObject.tag == "P1") {
 
-            bulletOffset = new Vector3(0, 1, 2);
+            bulletOffsetMid = p1gunMid.position;
+            bulletOffsetLeft = p1gunLeft.position;
+            bulletOffsetRight = p1gunRight.position;
+
+            _bullets = new List<GameObject>();
 
         } else if (this.gameObject.tag == "P2") {
 
-            bulletOffset = new Vector3(0, 1, -2);
+            bulletOffsetMid = p2gunMid.position;
+            bulletOffsetLeft = p2gunLeft.position;
+            bulletOffsetRight = p2gunRight.position;
+
+            _bullets = new List<GameObject>();
 
         }
 
-        //Instantiate(Curser, CurserVec, transform.rotation, this.transform);
-        //CurserBS();
         ammoText = GameObject.Find(this.gameObject.tag + "ammo").GetComponent<Text>();
         healthText = GameObject.Find(this.gameObject.tag + "life").GetComponent<Text>();
         gameOverPanel = GameObject.Find("Canvas").transform.Find("GameOverPanel").gameObject;
@@ -49,17 +80,73 @@ public class PlayerController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+        _bulletRotation = this.transform.rotation;
+        _bulletRotationRight = this.transform.rotation;
+
         ammoText.text = ammo.ToString();
         healthText.text = health.ToString();
 
         Movement();
-        //CurserControll();
+
         Rotation();
+
         Shoot();
 
-        if (this.transform.rotation.x != 0 && this.transform.rotation.z != 0) {
+        if (this.gameObject.tag == "P1")
+        {
 
+            bulletOffsetMid = p1gunMid.position;
+            bulletOffsetLeft = p1gunLeft.position;
+            bulletOffsetRight = p1gunRight.position;
+
+        }
+        else if (this.gameObject.tag == "P2")
+        {
+
+            bulletOffsetMid = p2gunMid.position;
+            bulletOffsetLeft = p2gunLeft.position;
+            bulletOffsetRight = p2gunRight.position;
+
+        }
+
+        if (runShotgun == true) {
+
+            ShotgunShoot();
+
+        }
+
+        if (ammo == 0)
+        {
+
+            StartCoroutine(ReloadTimer());
+
+        }
+
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+
+        if (collision.collider.tag == "Bullet")
+        {
+
+            Destroy(collision.gameObject);
+
+            if (this._bullets.Contains(collision.collider.gameObject) == false) {
+
+                health -= 1;
+                
+                Death();
+
+            }
             
+        }
+
+        if (collision.collider.tag == "DATRAINKILLEDMEH")
+        {
+
+            health = 0;
+            Death();
 
         }
 
@@ -90,113 +177,67 @@ public class PlayerController : MonoBehaviour {
 
     }
 
-    //void CurserControll() {
-
-    //    //int layerMask = 1 << 9;
-
-    //    //Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-    //    //RaycastHit hit;
-
-    //    float moveH2 = Input.GetAxis("Horizontal" + this.gameObject.tag + "-2") * Time.deltaTime;
-    //    float moveV2 = Input.GetAxis("Vertical" + this.gameObject.tag + "-2") * Time.deltaTime;
-
-    //    GameObject.Find("Curser" + this.gameObject.tag).transform.Translate((moveH2 * rotSpeed), 0, (moveV2 * rotSpeed));
-
-    //    this.transform.LookAt(GameObject.Find("Curser" + this.gameObject.tag).transform);
-
-    //    /*if (Physics.Raycast(ray, out hit, 100, layerMask)) {
-
-    //        Debug.DrawLine(ray.origin, hit.point, Color.red);
-    //        Debug.DrawLine(this.transform.position, hit.point, Color.blue, 2);
-    //        GameObject.Find("Curser" + this.gameObject.tag).transform.position = hit.point;
-    //        this.transform.LookAt(GameObject.Find("Curser" + this.gameObject.tag).transform);
-
-    //    }*/
-
-    //}
-
     void Shoot() {
 
         
 
-        if (Input.GetButtonDown("Shoot" + this.gameObject.tag) && ammo > 0 && paused == false) {
+        if (Input.GetButtonDown("Shoot" + this.gameObject.tag) && ammo > 0 && isReloading == false && revPaused == false && revolverActive == true) {
 
             ammo--;
 
+            this._bullets.Add(Instantiate(Bullet, bulletOffsetMid, _bulletRotation));
 
-            if (this.gameObject.tag == "P1") {
-
-                Instantiate(Bullet, transform.position + bulletOffset, Quaternion.identity);
-
-            }
-            else if (this.gameObject.tag == "P2") {
-
-                Instantiate(Bullet2, transform.position + bulletOffset, Quaternion.identity);
-
-            }
-
-            //.GetComponent<Rigidbody>().AddForce(transform.forward * thrust, ForceMode.Impulse);
-
-            //StartCoroutine(FireRate(fireRateMultiplyer));
-
-        }
-
-        if (ammo == 0) {
-
-            StartCoroutine(ReloadTimer());
+            StartCoroutine(FireRate(fireRateMultiplyer));
 
         }
 
     }
 
-    //IEnumerator FireRate(float fireRateMultiplyer) {
+    IEnumerator FireRate(float rate)
+    {
+        if(isReloading == false) {
 
-    //    paused = true;
-    //    yield return new WaitForSecondsRealtime(fireRateMultiplyer);
-    //    paused = false;
+            revPaused = true;
+            shotPaused = true;
+            yield return new WaitForSecondsRealtime(rate);
+            shotPaused = false;
+            revPaused = false;
 
-    //}
+        }
+
+    }
 
     IEnumerator ReloadTimer() {
 
+        isReloading = true;
+
         while (ammo < 6) {
 
-            paused = true;
             ammo++;
+
             yield return new WaitForSecondsRealtime(0.5f);
 
         }
 
-        paused = false;
+        fireRateMultiplyer = 0.5f;
+        _bullets.Clear();
+
+        this.currentBulletIdx = 0;
+        this.shotgunActive = false;
+        this.runShotgun = false;
+        this.revolverActive = true;
+        this.dontDo = false;
+        this.hasPickUp = false;
+
+        isReloading = false;
 
     }
 
-    //void CurserBS() {
+    IEnumerator WaitShotgun() {
 
-    //    this.transform.Find("Curser(Clone)").name = "Curser" + this.gameObject.tag;
-    //    this.transform.Find("Curser" + this.gameObject.tag).transform.SetParent(GameObject.Find("WorldPoint").transform);
 
-    //}
+        yield return new WaitForSeconds(0.1f);
 
-    private void OnCollisionEnter(Collision collision)
-    {
-
-        if (collision.collider.tag == "Bullet")
-        {
-
-            health--;
-            Destroy(collision.gameObject);
-            Death();
-
-        }
-
-        if (collision.collider.tag == "DATRAINKILLEDMEH")
-        {
-
-            health = 0;
-            Death();
-
-        }
 
     }
 
@@ -206,6 +247,39 @@ public class PlayerController : MonoBehaviour {
 
             Time.timeScale = 0.0f;
             gameOverPanel.SetActive(true);
+
+        }
+
+    }
+
+    public void RapidBuff() {
+
+        ammo = 6;
+
+        fireRateMultiplyer -= rapidFireModifier;
+
+    }
+
+    public void ShotgunShoot() {
+
+
+
+        if (ammo < 6 && dontDo == false) {
+
+            ammo = 6;
+            dontDo = true;
+
+        }
+
+        if (Input.GetButtonDown("Shoot" + this.gameObject.tag) && ammo > 0 && isReloading == false && shotPaused == false && shotgunActive == true) {
+
+            ammo -= 3;
+
+            this._bullets.Add(Instantiate(Bullet, bulletOffsetMid, _bulletRotation));
+            this._bullets.Add(Instantiate(Bullet, bulletOffsetLeft, _bulletRotation *= Quaternion.Euler(0, -10, 0)));
+            this._bullets.Add(Instantiate(Bullet, bulletOffsetRight, _bulletRotationRight *= Quaternion.Euler(0, 10, 0)));
+
+            StartCoroutine(FireRate(fireRateMultiplyer));
 
         }
 

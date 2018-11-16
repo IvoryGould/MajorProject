@@ -22,6 +22,8 @@ GameObject:
   - component: {fileID: 33965930617786722}
   - component: {fileID: 65970366769901806}
   - component: {fileID: 23447597169438362}
+  - component: {fileID: 114046717158604530}
+  - component: {fileID: 114102703662760760}
   m_Layer: 0
   m_Name: red
   m_TagString: Untagged
@@ -95,3 +97,28 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114046717158604530
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1693282554584190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7be55dc110368104887bd88bbabec565, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114102703662760760
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1693282554584190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a41e5bf3772d95c4dac40cd0ef2e7866, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerOne: {fileID: 0}
+  playerTwo: {fileID: 0}
+  playerObj: {fileID: 0}

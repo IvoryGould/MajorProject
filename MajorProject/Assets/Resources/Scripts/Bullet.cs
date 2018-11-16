@@ -5,11 +5,13 @@ using UnityEngine;
 public class Bullet : MonoBehaviour {
 
     //int passCount = 0; 
+    public float thrust = 25;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 
         StartCoroutine(TimerDelete());
+        this.GetComponent<Rigidbody>().AddForce(transform.forward * thrust, ForceMode.Impulse);
 
 	}
 	

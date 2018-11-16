@@ -297,11 +297,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Resources\Scripts\Bandage.cs" />
     <Compile Include="Assets\Resources\Scripts\Bullet.cs" />
     <Compile Include="Assets\Resources\Scripts\Collectable.cs" />
     <Compile Include="Assets\Resources\Scripts\CollectableSpawner.cs" />
     <Compile Include="Assets\Resources\Scripts\GameManager.cs" />
     <Compile Include="Assets\Resources\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\Resources\Scripts\RapidFire.cs" />
     <Compile Include="Assets\Resources\Scripts\Shotgun.cs" />
     <Compile Include="Assets\Resources\Scripts\SpawnTrain.cs" />
     <Compile Include="Assets\Resources\Scripts\StateManager.cs" />
