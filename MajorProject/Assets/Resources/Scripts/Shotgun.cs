@@ -54,7 +54,7 @@ public class Shotgun : MonoBehaviour {
 
         if (playerObj.tag == "P1") {
 
-            if (playerOne.hasPickUp == false) {
+            if (playerOne.hasPickUp == false && playerOne.rapidFireActive == false) {
 
                 playerOne.hasPickUp = true;
                 playerOne.revolverActive = false;
@@ -66,7 +66,7 @@ public class Shotgun : MonoBehaviour {
         }
         else if (playerObj.tag == "P2") {
 
-            if (playerTwo.hasPickUp == false) {
+            if (playerTwo.hasPickUp == false && playerTwo.rapidFireActive == false) {
 
                 playerTwo.hasPickUp = true;
                 playerTwo.revolverActive = false;

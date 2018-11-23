@@ -18,12 +18,24 @@ public class Bullet : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		
+        
+
 	}
 
     IEnumerator TimerDelete() {
 
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(2);
         Destroy(this.gameObject);
+
+    }
+
+    private void OnCollisionEnter(Collision collision) {
+
+        if (collision.collider.tag == "DELETEWALL") {
+
+            Destroy(this.gameObject);
+
+        }
 
     }
 

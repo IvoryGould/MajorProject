@@ -1,0 +1,717 @@
+fileFormatVersion: 2
+guid: 0083e48baf77b1b45bde4f92d5774b64
+timeCreated: 1542843126
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: SM_Cowboy_FINAL:Chest_CTRL
+    100004: SM_Cowboy_FINAL:Head_CTRL
+    100006: SM_Cowboy_FINAL:Head_J
+    100008: SM_Cowboy_FINAL:HeadTip_J
+    100010: SM_Cowboy_FINAL:Hip_CTRL
+    100012: SM_Cowboy_FINAL:Hip_J
+    100014: SM_Cowboy_FINAL:L_Clavicle_J
+    100016: SM_Cowboy_FINAL:L_Elbow_J
+    100018: SM_Cowboy_FINAL:L_Fingers_CTRL
+    100020: SM_Cowboy_FINAL:L_Fingers_J
+    100022: SM_Cowboy_FINAL:L_Foot_CTRL
+    100024: SM_Cowboy_FINAL:L_Foot_J
+    100026: SM_Cowboy_FINAL:L_Knee_J
+    100028: SM_Cowboy_FINAL:L_LegTop_J
+    100030: SM_Cowboy_FINAL:L_Shoulder_J
+    100032: SM_Cowboy_FINAL:L_Thumb_J
+    100034: SM_Cowboy_FINAL:L_Toe_J
+    100036: SM_Cowboy_FINAL:L_ToeTip_J
+    100038: SM_Cowboy_FINAL:L_Wrist_CTRL
+    100040: SM_Cowboy_FINAL:L_Wrist_J
+    100042: SM_Cowboy_FINAL:Master_CTRL
+    100044: SM_Cowboy_FINAL:Neck_J
+    100046: SM_Cowboy_FINAL:R_Clavicle_J
+    100048: SM_Cowboy_FINAL:R_Elbow_J
+    100050: SM_Cowboy_FINAL:R_Fingers_CTRL
+    100052: SM_Cowboy_FINAL:R_Fingers_J
+    100054: SM_Cowboy_FINAL:R_Foot_CTRL
+    100056: SM_Cowboy_FINAL:R_Foot_J
+    100058: SM_Cowboy_FINAL:R_Knee_J
+    100060: SM_Cowboy_FINAL:R_LegTop_J
+    100062: SM_Cowboy_FINAL:R_Shoulder_J
+    100064: SM_Cowboy_FINAL:R_Thumb_J
+    100066: SM_Cowboy_FINAL:R_Toe_J
+    100068: SM_Cowboy_FINAL:R_ToeTip_J
+    100070: SM_Cowboy_FINAL:R_Wrist_CTRL
+    100072: SM_Cowboy_FINAL:R_Wrist_J
+    100074: SM_Cowboy_FINAL:sm_cowboy_body
+    100076: SM_Cowboy_FINAL:Spine01_J
+    100078: SM_Cowboy_FINAL:Spine02_J
+    100080: SM_Cowboy_Hat:Hat
+    100082: SM_Cowboy_Hat:Hat_JNT
+    100084: SM_Cowboy_Hat:SM_Cowboy_Hat
+    100086: SM_Revolver:Revolver_JNT
+    100088: SM_Revolver:SM_Revolver
+    100090: SM_Revolver:SM_revolver
+    400000: //RootNode
+    400002: SM_Cowboy_FINAL:Chest_CTRL
+    400004: SM_Cowboy_FINAL:Head_CTRL
+    400006: SM_Cowboy_FINAL:Head_J
+    400008: SM_Cowboy_FINAL:HeadTip_J
+    400010: SM_Cowboy_FINAL:Hip_CTRL
+    400012: SM_Cowboy_FINAL:Hip_J
+    400014: SM_Cowboy_FINAL:L_Clavicle_J
+    400016: SM_Cowboy_FINAL:L_Elbow_J
+    400018: SM_Cowboy_FINAL:L_Fingers_CTRL
+    400020: SM_Cowboy_FINAL:L_Fingers_J
+    400022: SM_Cowboy_FINAL:L_Foot_CTRL
+    400024: SM_Cowboy_FINAL:L_Foot_J
+    400026: SM_Cowboy_FINAL:L_Knee_J
+    400028: SM_Cowboy_FINAL:L_LegTop_J
+    400030: SM_Cowboy_FINAL:L_Shoulder_J
+    400032: SM_Cowboy_FINAL:L_Thumb_J
+    400034: SM_Cowboy_FINAL:L_Toe_J
+    400036: SM_Cowboy_FINAL:L_ToeTip_J
+    400038: SM_Cowboy_FINAL:L_Wrist_CTRL
+    400040: SM_Cowboy_FINAL:L_Wrist_J
+    400042: SM_Cowboy_FINAL:Master_CTRL
+    400044: SM_Cowboy_FINAL:Neck_J
+    400046: SM_Cowboy_FINAL:R_Clavicle_J
+    400048: SM_Cowboy_FINAL:R_Elbow_J
+    400050: SM_Cowboy_FINAL:R_Fingers_CTRL
+    400052: SM_Cowboy_FINAL:R_Fingers_J
+    400054: SM_Cowboy_FINAL:R_Foot_CTRL
+    400056: SM_Cowboy_FINAL:R_Foot_J
+    400058: SM_Cowboy_FINAL:R_Knee_J
+    400060: SM_Cowboy_FINAL:R_LegTop_J
+    400062: SM_Cowboy_FINAL:R_Shoulder_J
+    400064: SM_Cowboy_FINAL:R_Thumb_J
+    400066: SM_Cowboy_FINAL:R_Toe_J
+    400068: SM_Cowboy_FINAL:R_ToeTip_J
+    400070: SM_Cowboy_FINAL:R_Wrist_CTRL
+    400072: SM_Cowboy_FINAL:R_Wrist_J
+    400074: SM_Cowboy_FINAL:sm_cowboy_body
+    400076: SM_Cowboy_FINAL:Spine01_J
+    400078: SM_Cowboy_FINAL:Spine02_J
+    400080: SM_Cowboy_Hat:Hat
+    400082: SM_Cowboy_Hat:Hat_JNT
+    400084: SM_Cowboy_Hat:SM_Cowboy_Hat
+    400086: SM_Revolver:Revolver_JNT
+    400088: SM_Revolver:SM_Revolver
+    400090: SM_Revolver:SM_revolver
+    2100000: SM_Cowboy_FINAL_cowboy_TX
+    2100002: SM_Cowboy_Hat_sm_cowboy_hat
+    2100004: SM_Revolver_sm_revolver_initialShadingGroup1
+    4300000: SM_Cowboy_FINAL:sm_cowboy_body
+    4300002: SM_Cowboy_Hat:SM_Cowboy_Hat
+    4300004: SM_Revolver:SM_revolver
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: SM_Cowboy_FINAL:sm_cowboy_body
+    13700002: SM_Cowboy_Hat:SM_Cowboy_Hat
+    13700004: SM_Revolver:SM_revolver
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 24
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: SM_Cowboy_FINAL:Hip_J
+        weight: 1
+      - path: SM_Cowboy_FINAL:Hip_J/SM_Cowboy_FINAL:L_LegTop_J
+        weight: 1
+      - path: SM_Cowboy_FINAL:Hip_J/SM_Cowboy_FINAL:L_LegTop_J/SM_Cowboy_FINAL:L_Knee_J
+        weight: 1
+      - path: SM_Cowboy_FINAL:Hip_J/SM_Cowboy_FINAL:L_LegTop_J/SM_Cowboy_FINAL:L_Knee_J/SM_Cowboy_FINAL:L_Foot_J
+        weight: 1
+      - path: SM_Cowboy_FINAL:Hip_J/SM_Cowboy_FINAL:L_LegTop_J/SM_Cowboy_FINAL:L_Knee_J/SM_Cowboy_FINAL:L_Foot_J/SM_Cowboy_FINAL:L_Toe_J
+        weight: 1
+      - path: SM_Cowboy_FINAL:Hip_J/SM_Cowboy_FINAL:L_LegTop_J/SM_Cowboy_FINAL:L_Knee_J/SM_Cowboy_FINAL:L_Foot_J/SM_Cowboy_FINAL:L_Toe_J/SM_Cowboy_FINAL:L_ToeTip_J
+        weight: 1
+      - path: SM_Cowboy_FINAL:Hip_J/SM_Cowboy_FINAL:R_LegTop_J
+        weight: 1
+      - path: SM_Cowboy_FINAL:Hip_J/SM_Cowboy_FINAL:R_LegTop_J/SM_Cowboy_FINAL:R_Knee_J
+        weight: 1
+      - path: SM_Cowboy_FINAL:Hip_J/SM_Cowboy_FINAL:R_LegTop_J/SM_Cowboy_FINAL:R_Knee_J/SM_Cowboy_FINAL:R_Foot_J
+        weight: 1
+      - path: SM_Cowboy_FINAL:Hip_J/SM_Cowboy_FINAL:R_LegTop_J/SM_Cowboy_FINAL:R_Knee_J/SM_Cowboy_FINAL:R_Foot_J/SM_Cowboy_FINAL:R_Toe_J
+        weight: 1
+      - path: SM_Cowboy_FINAL:Hip_J/SM_Cowboy_FINAL:R_LegTop_J/SM_Cowboy_FINAL:R_Knee_J/SM_Cowboy_FINAL:R_Foot_J/SM_Cowboy_FINAL:R_Toe_J/SM_Cowboy_FINAL:R_ToeTip_J
+        weight: 1
+      - path: SM_Cowboy_FINAL:Hip_J/SM_Cowboy_FINAL:Spine01_J
+        weight: 1
+      - path: SM_Cowboy_FINAL:Hip_J/SM_Cowboy_FINAL:Spine01_J/SM_Cowboy_FINAL:Spine02_J
+        weight: 1
+      - path: SM_Cowboy_FINAL:Hip_J/SM_Cowboy_FINAL:Spine01_J/SM_Cowboy_FINAL:Spine02_J/SM_Cowboy_FINAL:Neck_J
+        weight: 1
+      - path: SM_Cowboy_FINAL:Hip_J/SM_Cowboy_FINAL:Spine01_J/SM_Cowboy_FINAL:Spine02_J/SM_Cowboy_FINAL:Neck_J/SM_Cowboy_FINAL:Head_J
+        weight: 1
+      - path: SM_Cowboy_FINAL:Hip_J/SM_Cowboy_FINAL:Spine01_J/SM_Cowboy_FINAL:Spine02_J/SM_Cowboy_FINAL:Neck_J/SM_Cowboy_FINAL:Head_J/SM_Cowboy_FINAL:HeadTip_J
+        weight: 1
+      - path: SM_Cowboy_FINAL:Hip_J/SM_Cowboy_FINAL:Spine01_J/SM_Cowboy_FINAL:Spine02_J/SM_Cowboy_FINAL:Neck_J/SM_Cowboy_FINAL:L_Clavicle_J
+        weight: 1
+      - path: SM_Cowboy_FINAL:Hip_J/SM_Cowboy_FINAL:Spine01_J/SM_Cowboy_FINAL:Spine02_J/SM_Cowboy_FINAL:Neck_J/SM_Cowboy_FINAL:L_Clavicle_J/SM_Cowboy_FINAL:L_Shoulder_J
+        weight: 1
+      - path: SM_Cowboy_FINAL:Hip_J/SM_Cowboy_FINAL:Spine01_J/SM_Cowboy_FINAL:Spine02_J/SM_Cowboy_FINAL:Neck_J/SM_Cowboy_FINAL:L_Clavicle_J/SM_Cowboy_FINAL:L_Shoulder_J/SM_Cowboy_FINAL:L_Elbow_J
+        weight: 1
+      - path: SM_Cowboy_FINAL:Hip_J/SM_Cowboy_FINAL:Spine01_J/SM_Cowboy_FINAL:Spine02_J/SM_Cowboy_FINAL:Neck_J/SM_Cowboy_FINAL:L_Clavicle_J/SM_Cowboy_FINAL:L_Shoulder_J/SM_Cowboy_FINAL:L_Elbow_J/SM_Cowboy_FINAL:L_Wrist_J
+        weight: 1
+      - path: SM_Cowboy_FINAL:Hip_J/SM_Cowboy_FINAL:Spine01_J/SM_Cowboy_FINAL:Spine02_J/SM_Cowboy_FINAL:Neck_J/SM_Cowboy_FINAL:L_Clavicle_J/SM_Cowboy_FINAL:L_Shoulder_J/SM_Cowboy_FINAL:L_Elbow_J/SM_Cowboy_FINAL:L_Wrist_J/SM_Cowboy_FINAL:L_Fingers_J
+        weight: 1
+      - path: SM_Cowboy_FINAL:Hip_J/SM_Cowboy_FINAL:Spine01_J/SM_Cowboy_FINAL:Spine02_J/SM_Cowboy_FINAL:Neck_J/SM_Cowboy_FINAL:L_Clavicle_J/SM_Cowboy_FINAL:L_Shoulder_J/SM_Cowboy_FINAL:L_Elbow_J/SM_Cowboy_FINAL:L_Wrist_J/SM_Cowboy_FINAL:L_Thumb_J
+        weight: 1
+      - path: SM_Cowboy_FINAL:Hip_J/SM_Cowboy_FINAL:Spine01_J/SM_Cowboy_FINAL:Spine02_J/SM_Cowboy_FINAL:Neck_J/SM_Cowboy_FINAL:R_Clavicle_J
+        weight: 1
+      - path: SM_Cowboy_FINAL:Hip_J/SM_Cowboy_FINAL:Spine01_J/SM_Cowboy_FINAL:Spine02_J/SM_Cowboy_FINAL:Neck_J/SM_Cowboy_FINAL:R_Clavicle_J/SM_Cowboy_FINAL:R_Shoulder_J
+        weight: 1
+      - path: SM_Cowboy_FINAL:Hip_J/SM_Cowboy_FINAL:Spine01_J/SM_Cowboy_FINAL:Spine02_J/SM_Cowboy_FINAL:Neck_J/SM_Cowboy_FINAL:R_Clavicle_J/SM_Cowboy_FINAL:R_Shoulder_J/SM_Cowboy_FINAL:R_Elbow_J
+        weight: 1
+      - path: SM_Cowboy_FINAL:Hip_J/SM_Cowboy_FINAL:Spine01_J/SM_Cowboy_FINAL:Spine02_J/SM_Cowboy_FINAL:Neck_J/SM_Cowboy_FINAL:R_Clavicle_J/SM_Cowboy_FINAL:R_Shoulder_J/SM_Cowboy_FINAL:R_Elbow_J/SM_Cowboy_FINAL:R_Wrist_J
+        weight: 1
+      - path: SM_Cowboy_FINAL:Hip_J/SM_Cowboy_FINAL:Spine01_J/SM_Cowboy_FINAL:Spine02_J/SM_Cowboy_FINAL:Neck_J/SM_Cowboy_FINAL:R_Clavicle_J/SM_Cowboy_FINAL:R_Shoulder_J/SM_Cowboy_FINAL:R_Elbow_J/SM_Cowboy_FINAL:R_Wrist_J/SM_Cowboy_FINAL:R_Fingers_J
+        weight: 1
+      - path: SM_Cowboy_FINAL:Hip_J/SM_Cowboy_FINAL:Spine01_J/SM_Cowboy_FINAL:Spine02_J/SM_Cowboy_FINAL:Neck_J/SM_Cowboy_FINAL:R_Clavicle_J/SM_Cowboy_FINAL:R_Shoulder_J/SM_Cowboy_FINAL:R_Elbow_J/SM_Cowboy_FINAL:R_Wrist_J/SM_Cowboy_FINAL:R_Thumb_J
+        weight: 1
+      - path: SM_Cowboy_FINAL:Master_CTRL
+        weight: 1
+      - path: SM_Cowboy_FINAL:Master_CTRL/SM_Cowboy_FINAL:Hip_CTRL
+        weight: 1
+      - path: SM_Cowboy_FINAL:Master_CTRL/SM_Cowboy_FINAL:Hip_CTRL/SM_Cowboy_FINAL:Chest_CTRL
+        weight: 1
+      - path: SM_Cowboy_FINAL:Master_CTRL/SM_Cowboy_FINAL:Hip_CTRL/SM_Cowboy_FINAL:Chest_CTRL/SM_Cowboy_FINAL:Head_CTRL
+        weight: 1
+      - path: SM_Cowboy_FINAL:Master_CTRL/SM_Cowboy_FINAL:Hip_CTRL/SM_Cowboy_FINAL:Chest_CTRL/SM_Cowboy_FINAL:L_Wrist_CTRL
+        weight: 1
+      - path: SM_Cowboy_FINAL:Master_CTRL/SM_Cowboy_FINAL:Hip_CTRL/SM_Cowboy_FINAL:Chest_CTRL/SM_Cowboy_FINAL:L_Wrist_CTRL/SM_Cowboy_FINAL:L_Fingers_CTRL
+        weight: 1
+      - path: SM_Cowboy_FINAL:Master_CTRL/SM_Cowboy_FINAL:Hip_CTRL/SM_Cowboy_FINAL:Chest_CTRL/SM_Cowboy_FINAL:R_Wrist_CTRL
+        weight: 1
+      - path: SM_Cowboy_FINAL:Master_CTRL/SM_Cowboy_FINAL:Hip_CTRL/SM_Cowboy_FINAL:Chest_CTRL/SM_Cowboy_FINAL:R_Wrist_CTRL/SM_Cowboy_FINAL:R_Fingers_CTRL
+        weight: 1
+      - path: SM_Cowboy_FINAL:Master_CTRL/SM_Cowboy_FINAL:L_Foot_CTRL
+        weight: 1
+      - path: SM_Cowboy_FINAL:Master_CTRL/SM_Cowboy_FINAL:R_Foot_CTRL
+        weight: 1
+      - path: SM_Cowboy_FINAL:sm_cowboy_body
+        weight: 1
+      - path: SM_Cowboy_Hat:Hat
+        weight: 1
+      - path: SM_Cowboy_Hat:Hat/SM_Cowboy_Hat:Hat_JNT
+        weight: 1
+      - path: SM_Cowboy_Hat:Hat/SM_Cowboy_Hat:SM_Cowboy_Hat
+        weight: 1
+      - path: SM_Revolver:SM_Revolver
+        weight: 1
+      - path: SM_Revolver:SM_Revolver/SM_Revolver:Revolver_JNT
+        weight: 1
+      - path: SM_Revolver:SM_Revolver/SM_Revolver:SM_revolver
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human:
+    - boneName: SM_Cowboy_FINAL:Hip_J
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: SM_Cowboy_FINAL:L_LegTop_J
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: SM_Cowboy_FINAL:R_LegTop_J
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: SM_Cowboy_FINAL:L_Knee_J
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: SM_Cowboy_FINAL:R_Knee_J
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: SM_Cowboy_FINAL:L_Foot_J
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: SM_Cowboy_FINAL:R_Foot_J
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: SM_Cowboy_FINAL:Spine01_J
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: SM_Cowboy_FINAL:Spine02_J
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: SM_Cowboy_FINAL:Head_J
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: SM_Cowboy_FINAL:L_Clavicle_J
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: SM_Cowboy_FINAL:R_Clavicle_J
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: SM_Cowboy_FINAL:L_Shoulder_J
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: SM_Cowboy_FINAL:R_Shoulder_J
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: SM_Cowboy_FINAL:L_Elbow_J
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: SM_Cowboy_FINAL:R_Elbow_J
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: SM_Cowboy_FINAL:L_Wrist_J
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: SM_Cowboy_FINAL:R_Wrist_J
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: SM_Cowboy_FINAL:L_Toe_J
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: SM_Cowboy_FINAL:R_Toe_J
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: SM_Cowboy_FINAL:HeadTip_J
+      humanName: RightEye
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: SM_Cowboy_FINAL:Neck_J
+      humanName: UpperChest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: Animation_002(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SM_Cowboy_FINAL:Master_CTRL
+      parentName: Animation_002(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SM_Cowboy_FINAL:Hip_CTRL
+      parentName: SM_Cowboy_FINAL:Master_CTRL
+      position: {x: -0, y: 0.56660306, z: -0.002498707}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SM_Cowboy_FINAL:Chest_CTRL
+      parentName: SM_Cowboy_FINAL:Hip_CTRL
+      position: {x: -0, y: 0.33011824, z: 0.0054082796}
+      rotation: {x: 0.09367334, y: -0, z: -0, w: 0.995603}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SM_Cowboy_FINAL:Head_CTRL
+      parentName: SM_Cowboy_FINAL:Chest_CTRL
+      position: {x: -0, y: 0.058448333, z: 0.018202893}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SM_Cowboy_FINAL:L_Wrist_CTRL
+      parentName: SM_Cowboy_FINAL:Chest_CTRL
+      position: {x: -0.25833932, y: -0.2861832, z: 0.12622568}
+      rotation: {x: -0.4500957, y: 0.008509951, z: 0.007674003, w: 0.89290684}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SM_Cowboy_FINAL:L_Fingers_CTRL
+      parentName: SM_Cowboy_FINAL:L_Wrist_CTRL
+      position: {x: -0.052910917, y: -0.052145995, z: 0.045772076}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SM_Cowboy_FINAL:R_Wrist_CTRL
+      parentName: SM_Cowboy_FINAL:Chest_CTRL
+      position: {x: 0.1525379, y: -0.014654846, z: 0.3306208}
+      rotation: {x: -0.50413555, y: -0.26489234, z: -0.23054893, w: 0.78900355}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SM_Cowboy_FINAL:R_Fingers_CTRL
+      parentName: SM_Cowboy_FINAL:R_Wrist_CTRL
+      position: {x: 0.052910957, y: -0.052145995, z: 0.045771565}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SM_Cowboy_FINAL:L_Foot_CTRL
+      parentName: SM_Cowboy_FINAL:Master_CTRL
+      position: {x: -0.090094544, y: 0.37538084, z: -0.33723176}
+      rotation: {x: 0.856317, y: 0, z: 0, w: 0.51645064}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SM_Cowboy_FINAL:R_Foot_CTRL
+      parentName: SM_Cowboy_FINAL:Master_CTRL
+      position: {x: 0.046526585, y: 0.05387262, z: 0.19233781}
+      rotation: {x: -0.19990459, y: 0, z: -0, w: 0.97981536}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SM_Cowboy_FINAL:sm_cowboy_body
+      parentName: Animation_002(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SM_Cowboy_Hat:Hat
+      parentName: Animation_002(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SM_Cowboy_Hat:SM_Cowboy_Hat
+      parentName: SM_Cowboy_Hat:Hat
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SM_Cowboy_Hat:Hat_JNT
+      parentName: SM_Cowboy_Hat:Hat
+      position: {x: -0, y: 1.2101659, z: 0.042864136}
+      rotation: {x: 0.000000005820765, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 0.9999999, z: 0.9999999}
+    - name: SM_Revolver:SM_Revolver
+      parentName: Animation_002(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SM_Revolver:SM_revolver
+      parentName: SM_Revolver:SM_Revolver
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SM_Revolver:Revolver_JNT
+      parentName: SM_Revolver:SM_Revolver
+      position: {x: 0.12737955, y: 0.9088176, z: 0.41486275}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SM_Cowboy_FINAL:Hip_J
+      parentName: Animation_002(Clone)
+      position: {x: 3.9443044e-33, y: 0.63296163, z: -0.002498707}
+      rotation: {x: -0, y: -1.2924697e-24, z: 1.00822735e-23, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SM_Cowboy_FINAL:L_LegTop_J
+      parentName: SM_Cowboy_FINAL:Hip_J
+      position: {x: -0.06277113, y: -0.07347328, z: -0.014992707}
+      rotation: {x: 0.50771886, y: 0.49216014, z: 0.47927895, w: 0.51989585}
+      scale: {x: 1.0000002, y: 1.0000007, z: 1}
+    - name: SM_Cowboy_FINAL:L_Knee_J
+      parentName: SM_Cowboy_FINAL:L_LegTop_J
+      position: {x: -0.25699908, y: 5.400388e-18, z: 4.132962e-17}
+      rotation: {x: 0.000008434056, y: 0.00042636687, z: 0.044948366, w: 0.9989892}
+      scale: {x: 1.0000005, y: 1.0000001, z: 1.0000005}
+    - name: SM_Cowboy_FINAL:L_Foot_J
+      parentName: SM_Cowboy_FINAL:L_Knee_J
+      position: {x: -0.23365532, y: -3.7118856e-17, z: 1.1112406e-17}
+      rotation: {x: -0.048422158, y: 0.013678549, z: -0.36107326, w: 0.93117905}
+      scale: {x: 1.0000004, y: 1.0000005, z: 1.0000001}
+    - name: SM_Cowboy_FINAL:L_Toe_J
+      parentName: SM_Cowboy_FINAL:L_Foot_J
+      position: {x: -0.06913139, y: -9.325873e-17, z: -1.7763568e-17}
+      rotation: {x: 0.01712784, y: 0.03575956, z: -0.4317601, w: 0.90111655}
+      scale: {x: 0.99999976, y: 1, z: 0.99999994}
+    - name: SM_Cowboy_FINAL:L_ToeTip_J
+      parentName: SM_Cowboy_FINAL:L_Toe_J
+      position: {x: -0.058291733, y: -3.1086245e-17, z: 8.8817837e-17}
+      rotation: {x: -0, y: -0.0000000037252903, z: 0.000000013213139, w: 1}
+      scale: {x: 0.99999994, y: 1.0000002, z: 1.0000002}
+    - name: SM_Cowboy_FINAL:R_LegTop_J
+      parentName: SM_Cowboy_FINAL:Hip_J
+      position: {x: 0.0627711, y: -0.07347327, z: -0.014992699}
+      rotation: {x: 0.4792789, y: 0.5198959, z: 0.50771886, w: 0.4921601}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
+    - name: SM_Cowboy_FINAL:R_Knee_J
+      parentName: SM_Cowboy_FINAL:R_LegTop_J
+      position: {x: -0.2569992, y: -6.288998e-17, z: -6.3783957e-17}
+      rotation: {x: -0.000008523464, y: -0.00042645633, z: 0.044948235, w: 0.9989892}
+      scale: {x: 1.0000007, y: 1.0000002, z: 1.0000005}
+    - name: SM_Cowboy_FINAL:R_Foot_J
+      parentName: SM_Cowboy_FINAL:R_Knee_J
+      position: {x: -0.23365524, y: -2.2454968e-16, z: 2.1345131e-17}
+      rotation: {x: 0.04842287, y: -0.013678308, z: -0.3610728, w: 0.9311791}
+      scale: {x: 1, y: 0.99999994, z: 1.0000001}
+    - name: SM_Cowboy_FINAL:R_Toe_J
+      parentName: SM_Cowboy_FINAL:R_Foot_J
+      position: {x: -0.06913132, y: -4.4408918e-17, z: 3.5527136e-17}
+      rotation: {x: -0.017128123, y: -0.03576001, z: -0.43175992, w: 0.90111667}
+      scale: {x: 1.0000005, y: 0.9999994, z: 0.99999994}
+    - name: SM_Cowboy_FINAL:R_ToeTip_J
+      parentName: SM_Cowboy_FINAL:R_Toe_J
+      position: {x: -0.058291778, y: 3.5527136e-17, z: 0}
+      rotation: {x: 0.000000018626451, y: -0.00000063329935, z: -0.0000004913891,
+        w: 1}
+      scale: {x: 1.0000001, y: 1, z: 1.0000002}
+    - name: SM_Cowboy_FINAL:Spine01_J
+      parentName: SM_Cowboy_FINAL:Hip_J
+      position: {x: 3.4833247e-17, y: 0.06325414, z: -0.005207899}
+      rotation: {x: -0.46624714, y: 0.5316142, z: -0.46624714, w: 0.5316142}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1}
+    - name: SM_Cowboy_FINAL:Spine02_J
+      parentName: SM_Cowboy_FINAL:Spine01_J
+      position: {x: -0.09123031, y: 1.7763568e-17, z: -2.0534755e-17}
+      rotation: {x: 0.99091536, y: -0.13448751, z: -0, w: 0}
+      scale: {x: 1.0000005, y: 1.0000007, z: 1.0000007}
+    - name: SM_Cowboy_FINAL:Neck_J
+      parentName: SM_Cowboy_FINAL:Spine02_J
+      position: {x: -0.17619972, y: -1.2434498e-16, z: 4.094541e-17}
+      rotation: {x: -0.9788596, y: 0.20453334, z: 0, w: 0}
+      scale: {x: 1.0000006, y: 1.0000005, z: 1.0000008}
+    - name: SM_Cowboy_FINAL:Head_J
+      parentName: SM_Cowboy_FINAL:Neck_J
+      position: {x: -0.061795693, y: 7.105427e-17, z: -1.8010364e-17}
+      rotation: {x: -0.99450225, y: 0.10471597, z: -0.000000031843932, w: 0.000000027610167}
+      scale: {x: 1.0000008, y: 1.0000015, z: 1.0000006}
+    - name: SM_Cowboy_FINAL:HeadTip_J
+      parentName: SM_Cowboy_FINAL:Head_J
+      position: {x: -0.2764105, y: 2.54355e-17, z: 6.437183e-17}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1.0000001, y: 1, z: 1}
+    - name: SM_Cowboy_FINAL:L_Clavicle_J
+      parentName: SM_Cowboy_FINAL:Neck_J
+      position: {x: 0.04955026, y: -0.06851112, z: -0.051846694}
+      rotation: {x: 0.5083248, y: -0.63237387, z: 0.3446944, w: 0.4721175}
+      scale: {x: 1, y: 1.0000002, z: 1.0000007}
+    - name: SM_Cowboy_FINAL:L_Shoulder_J
+      parentName: SM_Cowboy_FINAL:L_Clavicle_J
+      position: {x: -0.076246224, y: 2.842171e-16, z: 8.881784e-18}
+      rotation: {x: 0.016286638, y: 0.16980617, z: 0.0484134, w: 0.9841528}
+      scale: {x: 0.99999994, y: 0.9999997, z: 1.0000002}
+    - name: SM_Cowboy_FINAL:L_Elbow_J
+      parentName: SM_Cowboy_FINAL:L_Shoulder_J
+      position: {x: -0.20169552, y: -5.684342e-16, z: -2.0539126e-17}
+      rotation: {x: 0.12063598, y: 0.01759927, z: -0.025565078, w: 0.9922115}
+      scale: {x: 1, y: 1.0000004, z: 1.0000004}
+    - name: SM_Cowboy_FINAL:L_Wrist_J
+      parentName: SM_Cowboy_FINAL:L_Elbow_J
+      position: {x: -0.13658053, y: 2.842171e-16, z: -7.105427e-17}
+      rotation: {x: 0.0406785, y: 0.066384524, z: 0.090361714, w: 0.99286115}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: SM_Cowboy_FINAL:L_Fingers_J
+      parentName: SM_Cowboy_FINAL:L_Wrist_J
+      position: {x: -0.08725742, y: -2.842171e-16, z: 0}
+      rotation: {x: -0, y: -0, z: 0.0000000027939675, w: 1}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1.0000002}
+    - name: SM_Cowboy_FINAL:L_Thumb_J
+      parentName: SM_Cowboy_FINAL:L_Wrist_J
+      position: {x: -0.05814497, y: 0.028527126, z: 0.042600475}
+      rotation: {x: -0, y: -0, z: 0.0000000027939675, w: 1}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1.0000002}
+    - name: SM_Cowboy_FINAL:R_Clavicle_J
+      parentName: SM_Cowboy_FINAL:Neck_J
+      position: {x: 0.0495503, y: -0.06851109, z: 0.051846698}
+      rotation: {x: -0.5083252, y: 0.63237363, z: 0.34469423, w: 0.47211757}
+      scale: {x: 1.0000012, y: 1.0000002, z: 1.0000014}
+    - name: SM_Cowboy_FINAL:R_Shoulder_J
+      parentName: SM_Cowboy_FINAL:R_Clavicle_J
+      position: {x: -0.07624624, y: 0, z: -1.2434498e-16}
+      rotation: {x: -0.01628631, y: -0.16980611, z: 0.048413787, w: 0.9841528}
+      scale: {x: 1.0000007, y: 0.99999976, z: 1.0000006}
+    - name: SM_Cowboy_FINAL:R_Elbow_J
+      parentName: SM_Cowboy_FINAL:R_Shoulder_J
+      position: {x: -0.20169504, y: 4.2632563e-16, z: 3.858025e-17}
+      rotation: {x: -0.120636314, y: -0.017599477, z: -0.025564956, w: 0.99221146}
+      scale: {x: 0.9999999, y: 1, z: 0.99999994}
+    - name: SM_Cowboy_FINAL:R_Wrist_J
+      parentName: SM_Cowboy_FINAL:R_Elbow_J
+      position: {x: -0.13658072, y: 1.4210854e-16, z: 1.0658141e-16}
+      rotation: {x: -0.040677283, y: -0.06638204, z: 0.09036185, w: 0.99286133}
+      scale: {x: 1.000001, y: 1.000001, z: 0.9999998}
+    - name: SM_Cowboy_FINAL:R_Fingers_J
+      parentName: SM_Cowboy_FINAL:R_Wrist_J
+      position: {x: -0.08725719, y: -2.842171e-16, z: -1.0658141e-16}
+      rotation: {x: 0.0000000037252894, y: -0, z: -0.000000009546054, w: 1}
+      scale: {x: 0.99999976, y: 1.0000001, z: 1}
+    - name: SM_Cowboy_FINAL:R_Thumb_J
+      parentName: SM_Cowboy_FINAL:R_Wrist_J
+      position: {x: -0.05814461, y: 0.028527537, z: -0.042600922}
+      rotation: {x: 0.0000000037252894, y: -0, z: -0.000000009546054, w: 1}
+      scale: {x: 0.99999976, y: 1.0000001, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 3
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

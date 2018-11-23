@@ -2,7 +2,7 @@ WindowsStandalone
 SceneListBegin?
 Assets/Scenes/Level-1.unity
 SceneListEnd?
-976a4c236221fdccfd200b5496175c0f Assembly-CSharp.dll:.PlayerController
+28adae800002d52a9f1c0e4b5c0e9a3b Assembly-CSharp.dll:.PlayerController
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
 970a95104359198fe1a98ef48655de8c UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationTrack
 8144169769d51429c4aedc8b0f92d47b UnityEngine.Timeline.dll:UnityEngine.Timeline.AnimationPlayableAsset
@@ -148,6 +148,6 @@ bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.Audi
 c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingCollider
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
 9de3a22eca9aefadba2d10d5987cefe3 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
+787ce2694d7274d6c43177c591da681d Assembly-CSharp.dll:.Bandage
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.tester
 d89fe7b7017b9d7a0fd8af693e6dd553 Assembly-CSharp.dll:.Train
-787ce2694d7274d6c43177c591da681d Assembly-CSharp.dll:.Bandage

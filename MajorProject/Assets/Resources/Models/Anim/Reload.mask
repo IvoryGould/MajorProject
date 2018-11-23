@@ -1,0 +1,102 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Reload
+  m_Mask: 01000000010000000000000000000000000000000100000001000000010000000100000000000000000000000100000001000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: SM_Cowboy_FINAL:Hip_J
+    m_Weight: 1
+  - m_Path: SM_Cowboy_FINAL:Hip_J/SM_Cowboy_FINAL:L_LegTop_J
+    m_Weight: 1
+  - m_Path: SM_Cowboy_FINAL:Hip_J/SM_Cowboy_FINAL:L_LegTop_J/SM_Cowboy_FINAL:L_Knee_J
+    m_Weight: 1
+  - m_Path: SM_Cowboy_FINAL:Hip_J/SM_Cowboy_FINAL:L_LegTop_J/SM_Cowboy_FINAL:L_Knee_J/SM_Cowboy_FINAL:L_Foot_J
+    m_Weight: 1
+  - m_Path: SM_Cowboy_FINAL:Hip_J/SM_Cowboy_FINAL:L_LegTop_J/SM_Cowboy_FINAL:L_Knee_J/SM_Cowboy_FINAL:L_Foot_J/SM_Cowboy_FINAL:L_Toe_J
+    m_Weight: 1
+  - m_Path: SM_Cowboy_FINAL:Hip_J/SM_Cowboy_FINAL:L_LegTop_J/SM_Cowboy_FINAL:L_Knee_J/SM_Cowboy_FINAL:L_Foot_J/SM_Cowboy_FINAL:L_Toe_J/SM_Cowboy_FINAL:L_ToeTip_J
+    m_Weight: 1
+  - m_Path: SM_Cowboy_FINAL:Hip_J/SM_Cowboy_FINAL:R_LegTop_J
+    m_Weight: 1
+  - m_Path: SM_Cowboy_FINAL:Hip_J/SM_Cowboy_FINAL:R_LegTop_J/SM_Cowboy_FINAL:R_Knee_J
+    m_Weight: 1
+  - m_Path: SM_Cowboy_FINAL:Hip_J/SM_Cowboy_FINAL:R_LegTop_J/SM_Cowboy_FINAL:R_Knee_J/SM_Cowboy_FINAL:R_Foot_J
+    m_Weight: 1
+  - m_Path: SM_Cowboy_FINAL:Hip_J/SM_Cowboy_FINAL:R_LegTop_J/SM_Cowboy_FINAL:R_Knee_J/SM_Cowboy_FINAL:R_Foot_J/SM_Cowboy_FINAL:R_Toe_J
+    m_Weight: 1
+  - m_Path: SM_Cowboy_FINAL:Hip_J/SM_Cowboy_FINAL:R_LegTop_J/SM_Cowboy_FINAL:R_Knee_J/SM_Cowboy_FINAL:R_Foot_J/SM_Cowboy_FINAL:R_Toe_J/SM_Cowboy_FINAL:R_ToeTip_J
+    m_Weight: 1
+  - m_Path: SM_Cowboy_FINAL:Hip_J/SM_Cowboy_FINAL:Spine01_J
+    m_Weight: 1
+  - m_Path: SM_Cowboy_FINAL:Hip_J/SM_Cowboy_FINAL:Spine01_J/SM_Cowboy_FINAL:Spine02_J
+    m_Weight: 1
+  - m_Path: SM_Cowboy_FINAL:Hip_J/SM_Cowboy_FINAL:Spine01_J/SM_Cowboy_FINAL:Spine02_J/SM_Cowboy_FINAL:Neck_J
+    m_Weight: 1
+  - m_Path: SM_Cowboy_FINAL:Hip_J/SM_Cowboy_FINAL:Spine01_J/SM_Cowboy_FINAL:Spine02_J/SM_Cowboy_FINAL:Neck_J/SM_Cowboy_FINAL:Head_J
+    m_Weight: 1
+  - m_Path: SM_Cowboy_FINAL:Hip_J/SM_Cowboy_FINAL:Spine01_J/SM_Cowboy_FINAL:Spine02_J/SM_Cowboy_FINAL:Neck_J/SM_Cowboy_FINAL:Head_J/SM_Cowboy_FINAL:HeadTip_J
+    m_Weight: 1
+  - m_Path: SM_Cowboy_FINAL:Hip_J/SM_Cowboy_FINAL:Spine01_J/SM_Cowboy_FINAL:Spine02_J/SM_Cowboy_FINAL:Neck_J/SM_Cowboy_FINAL:L_Clavicle_J
+    m_Weight: 1
+  - m_Path: SM_Cowboy_FINAL:Hip_J/SM_Cowboy_FINAL:Spine01_J/SM_Cowboy_FINAL:Spine02_J/SM_Cowboy_FINAL:Neck_J/SM_Cowboy_FINAL:L_Clavicle_J/SM_Cowboy_FINAL:L_Shoulder_J
+    m_Weight: 1
+  - m_Path: SM_Cowboy_FINAL:Hip_J/SM_Cowboy_FINAL:Spine01_J/SM_Cowboy_FINAL:Spine02_J/SM_Cowboy_FINAL:Neck_J/SM_Cowboy_FINAL:L_Clavicle_J/SM_Cowboy_FINAL:L_Shoulder_J/SM_Cowboy_FINAL:L_Elbow_J
+    m_Weight: 1
+  - m_Path: SM_Cowboy_FINAL:Hip_J/SM_Cowboy_FINAL:Spine01_J/SM_Cowboy_FINAL:Spine02_J/SM_Cowboy_FINAL:Neck_J/SM_Cowboy_FINAL:L_Clavicle_J/SM_Cowboy_FINAL:L_Shoulder_J/SM_Cowboy_FINAL:L_Elbow_J/SM_Cowboy_FINAL:L_Wrist_J
+    m_Weight: 1
+  - m_Path: SM_Cowboy_FINAL:Hip_J/SM_Cowboy_FINAL:Spine01_J/SM_Cowboy_FINAL:Spine02_J/SM_Cowboy_FINAL:Neck_J/SM_Cowboy_FINAL:L_Clavicle_J/SM_Cowboy_FINAL:L_Shoulder_J/SM_Cowboy_FINAL:L_Elbow_J/SM_Cowboy_FINAL:L_Wrist_J/SM_Cowboy_FINAL:L_Fingers_J
+    m_Weight: 1
+  - m_Path: SM_Cowboy_FINAL:Hip_J/SM_Cowboy_FINAL:Spine01_J/SM_Cowboy_FINAL:Spine02_J/SM_Cowboy_FINAL:Neck_J/SM_Cowboy_FINAL:L_Clavicle_J/SM_Cowboy_FINAL:L_Shoulder_J/SM_Cowboy_FINAL:L_Elbow_J/SM_Cowboy_FINAL:L_Wrist_J/SM_Cowboy_FINAL:L_Thumb_J
+    m_Weight: 1
+  - m_Path: SM_Cowboy_FINAL:Hip_J/SM_Cowboy_FINAL:Spine01_J/SM_Cowboy_FINAL:Spine02_J/SM_Cowboy_FINAL:Neck_J/SM_Cowboy_FINAL:R_Clavicle_J
+    m_Weight: 1
+  - m_Path: SM_Cowboy_FINAL:Hip_J/SM_Cowboy_FINAL:Spine01_J/SM_Cowboy_FINAL:Spine02_J/SM_Cowboy_FINAL:Neck_J/SM_Cowboy_FINAL:R_Clavicle_J/SM_Cowboy_FINAL:R_Shoulder_J
+    m_Weight: 1
+  - m_Path: SM_Cowboy_FINAL:Hip_J/SM_Cowboy_FINAL:Spine01_J/SM_Cowboy_FINAL:Spine02_J/SM_Cowboy_FINAL:Neck_J/SM_Cowboy_FINAL:R_Clavicle_J/SM_Cowboy_FINAL:R_Shoulder_J/SM_Cowboy_FINAL:R_Elbow_J
+    m_Weight: 1
+  - m_Path: SM_Cowboy_FINAL:Hip_J/SM_Cowboy_FINAL:Spine01_J/SM_Cowboy_FINAL:Spine02_J/SM_Cowboy_FINAL:Neck_J/SM_Cowboy_FINAL:R_Clavicle_J/SM_Cowboy_FINAL:R_Shoulder_J/SM_Cowboy_FINAL:R_Elbow_J/SM_Cowboy_FINAL:R_Wrist_J
+    m_Weight: 1
+  - m_Path: SM_Cowboy_FINAL:Hip_J/SM_Cowboy_FINAL:Spine01_J/SM_Cowboy_FINAL:Spine02_J/SM_Cowboy_FINAL:Neck_J/SM_Cowboy_FINAL:R_Clavicle_J/SM_Cowboy_FINAL:R_Shoulder_J/SM_Cowboy_FINAL:R_Elbow_J/SM_Cowboy_FINAL:R_Wrist_J/SM_Cowboy_FINAL:R_Fingers_J
+    m_Weight: 1
+  - m_Path: SM_Cowboy_FINAL:Hip_J/SM_Cowboy_FINAL:Spine01_J/SM_Cowboy_FINAL:Spine02_J/SM_Cowboy_FINAL:Neck_J/SM_Cowboy_FINAL:R_Clavicle_J/SM_Cowboy_FINAL:R_Shoulder_J/SM_Cowboy_FINAL:R_Elbow_J/SM_Cowboy_FINAL:R_Wrist_J/SM_Cowboy_FINAL:R_Thumb_J
+    m_Weight: 1
+  - m_Path: SM_Cowboy_FINAL:Master_CTRL
+    m_Weight: 1
+  - m_Path: SM_Cowboy_FINAL:Master_CTRL/SM_Cowboy_FINAL:Hip_CTRL
+    m_Weight: 1
+  - m_Path: SM_Cowboy_FINAL:Master_CTRL/SM_Cowboy_FINAL:Hip_CTRL/SM_Cowboy_FINAL:Chest_CTRL
+    m_Weight: 1
+  - m_Path: SM_Cowboy_FINAL:Master_CTRL/SM_Cowboy_FINAL:Hip_CTRL/SM_Cowboy_FINAL:Chest_CTRL/SM_Cowboy_FINAL:Head_CTRL
+    m_Weight: 1
+  - m_Path: SM_Cowboy_FINAL:Master_CTRL/SM_Cowboy_FINAL:Hip_CTRL/SM_Cowboy_FINAL:Chest_CTRL/SM_Cowboy_FINAL:L_Wrist_CTRL
+    m_Weight: 1
+  - m_Path: SM_Cowboy_FINAL:Master_CTRL/SM_Cowboy_FINAL:Hip_CTRL/SM_Cowboy_FINAL:Chest_CTRL/SM_Cowboy_FINAL:L_Wrist_CTRL/SM_Cowboy_FINAL:L_Fingers_CTRL
+    m_Weight: 1
+  - m_Path: SM_Cowboy_FINAL:Master_CTRL/SM_Cowboy_FINAL:Hip_CTRL/SM_Cowboy_FINAL:Chest_CTRL/SM_Cowboy_FINAL:R_Wrist_CTRL
+    m_Weight: 1
+  - m_Path: SM_Cowboy_FINAL:Master_CTRL/SM_Cowboy_FINAL:Hip_CTRL/SM_Cowboy_FINAL:Chest_CTRL/SM_Cowboy_FINAL:R_Wrist_CTRL/SM_Cowboy_FINAL:R_Fingers_CTRL
+    m_Weight: 1
+  - m_Path: SM_Cowboy_FINAL:Master_CTRL/SM_Cowboy_FINAL:L_Foot_CTRL
+    m_Weight: 1
+  - m_Path: SM_Cowboy_FINAL:Master_CTRL/SM_Cowboy_FINAL:R_Foot_CTRL
+    m_Weight: 1
+  - m_Path: SM_Cowboy_FINAL:sm_cowboy_body
+    m_Weight: 1
+  - m_Path: SM_Cowboy_Hat:Hat
+    m_Weight: 1
+  - m_Path: SM_Cowboy_Hat:Hat/SM_Cowboy_Hat:Hat_JNT
+    m_Weight: 1
+  - m_Path: SM_Cowboy_Hat:Hat/SM_Cowboy_Hat:SM_Cowboy_Hat
+    m_Weight: 1
+  - m_Path: SM_Revolver:SM_Revolver
+    m_Weight: 1
+  - m_Path: SM_Revolver:SM_Revolver/SM_Revolver:Revolver_JNT
+    m_Weight: 1
+  - m_Path: SM_Revolver:SM_Revolver/SM_Revolver:SM_revolver
+    m_Weight: 1

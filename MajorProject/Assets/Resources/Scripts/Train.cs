@@ -24,9 +24,17 @@ public class Train : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        if (this.transform.position == new Vector3(0, 1, 30))
+        if (this.name == "Train1" && this.transform.position == new Vector3(0, 1, 40))
         {
 
+            this.transform.rotation = Quaternion.Euler(0, 180, 0);
+            StartCoroutine(Timer());
+
+        }
+        else if (this.name == "Train2" && this.transform.position == new Vector3(30, 1, 0))
+        {
+
+            this.transform.rotation = Quaternion.Euler(0, -90, 0);
             StartCoroutine(Timer());
 
         }
@@ -35,7 +43,7 @@ public class Train : MonoBehaviour {
 
     void Movement() {
 
-        this.transform.Translate(0, 0 , (-moveSpeed * Time.deltaTime));
+        this.transform.Translate(0, 0 , (moveSpeed * Time.deltaTime));
 
     }
 

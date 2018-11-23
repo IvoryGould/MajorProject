@@ -48,7 +48,7 @@ public class RapidFire : MonoBehaviour {
 
         if (playerObj.tag == "P1") {
 
-            if (playerOne.hasPickUp == false) {
+            if (playerOne.hasPickUp == false && playerOne.shotgunActive == false) {
 
                 playerOne.hasPickUp = true;
                 playerOne.RapidBuff();
@@ -59,7 +59,7 @@ public class RapidFire : MonoBehaviour {
 
         } else if(playerObj.tag == "P2") {
 
-            if (playerTwo.hasPickUp == false) {
+            if (playerTwo.hasPickUp == false && playerTwo.shotgunActive == false) {
 
                 playerTwo.hasPickUp = true;
                 playerTwo.RapidBuff();
