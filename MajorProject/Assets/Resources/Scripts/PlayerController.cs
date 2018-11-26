@@ -53,6 +53,8 @@ public class PlayerController : MonoBehaviour {
     public bool hasPickUp = false;
     public bool rapidFireActive = false;
 
+    bool dash = true;
+
     public List<GameObject> _bullets;
 
     // Use this for initialization
@@ -182,18 +184,19 @@ public class PlayerController : MonoBehaviour {
         this.transform.Translate(Vector3.forward * (moveH * moveSpeed), Space.World);
         this.transform.Translate(Vector3.right * (moveV * moveSpeed), Space.World);
 
+
+
+        //DASH
+        if (Input.GetButtonDown("Dash" + this.gameObject.tag) && dash == true) {
+
+            this.transform.Translate(Vector3.forward * 5, Space.Self);
+
+            StartCoroutine(DashCoolDown());
+
+        }
+
         animator.SetFloat("moving", moveH);
         animator.SetFloat("movingH", moveV);
-
-        //if (moveH != 0 && moveV != 0) {
-
-        //    animator.SetBool("Moving", true);
-
-        //} else {
-
-        //    animator.SetBool("Moving", false);
-
-        //}
 
         if (moveV == 0 && moveH == 0)
         {
@@ -211,12 +214,23 @@ public class PlayerController : MonoBehaviour {
 
     void Rotation() {
 
-        float moveH2 = Input.GetAxis("Horizontal" + this.gameObject.tag + "-2") * Time.deltaTime;
+        //float moveH2 = Input.GetAxis("Horizontal" + this.gameObject.tag + "-2") * Time.deltaTime;
         //float moveV2 = Input.GetAxis("Vertical" + this.gameObject.tag + "-2") * Time.deltaTime;
 
-        this.transform.Rotate(0, moveH2*rotSpeed, 0);
+        //this.transform.Rotate(0, moveH2*rotSpeed, 0);
+
+
+        //Directional joystick rotation
+        Vector3 input = new Vector3(Input.GetAxis("Vertical" + this.gameObject.tag + "-2"), 0, Input.GetAxis("Horizontal" + this.gameObject.tag + "-2"));
+
+        if (input != Vector3.zero) {
+
+            transform.forward = input;
+
+        }
 
     }
+
 
     void Shoot() {
 
@@ -231,6 +245,15 @@ public class PlayerController : MonoBehaviour {
             StartCoroutine(FireRate(fireRateMultiplyer));
 
         }
+
+    }
+
+    IEnumerator DashCoolDown() {
+
+        dash = false;
+        yield return new WaitForSecondsRealtime(3);
+        dash = true;
+
 
     }
 
