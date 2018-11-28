@@ -35,14 +35,18 @@ public class Bandage : MonoBehaviour
 
         Destroy(this.gameObject);
 
-        if (playerObj.tag == "P1") {
+        if (playerObj.tag == "P1" && playerOne.health != 6) {
 
             playerOne.health += 1;
+            playerOne.l_Health[playerOne._healthIdx].enabled = true;
+            playerOne._healthIdx += 1;
 
         }
-        else if (playerObj.tag == "P2") {
+        else if (playerObj.tag == "P2" && playerTwo.health != 6) {
 
             playerTwo.health += 1;
+            playerTwo.l_Health[playerTwo._healthIdx].enabled = true;
+            playerTwo._healthIdx += 1;
 
         }
 

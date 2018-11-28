@@ -10,9 +10,15 @@ public class PlayerController : MonoBehaviour {
     public float fireRateMultiplyer = 0.5f;
     public float rapidFireModifier = 0.25f;
 
+    public AudioSource audioSource;
+    public AudioClip revShot;
+    public AudioClip shotGun;
+    public AudioClip reload;
+
     public GameObject Curser;
     public GameObject Bullet;
     public GameObject gameOverPanel;
+    public GameObject musselFlash;
 
     public Transform p1gunMid;
     public Transform p1gunLeft;
@@ -22,14 +28,16 @@ public class PlayerController : MonoBehaviour {
     public Transform p2gunLeft;
     public Transform p2gunRight;
 
-    public Text ammoText;
-    public Text healthText;
-
     public Vector3 bulletOffsetMid;
     public Vector3 bulletOffsetLeft;
     public Vector3 bulletOffsetRight;
 
     public Animator animator;
+
+    public List<Image> l_Health;
+    public int _healthIdx;
+    public List<Image> l_Ammo;
+    public int _ammoIdx;
 
     public GameObject playerCanvas;
 
@@ -66,7 +74,24 @@ public class PlayerController : MonoBehaviour {
             bulletOffsetLeft = p1gunLeft.position;
             bulletOffsetRight = p1gunRight.position;
 
+            audioSource = this.gameObject.GetComponent<AudioSource>();
+
             _bullets = new List<GameObject>();
+            l_Health = new List<Image>();
+            l_Ammo = new List<Image>();
+
+            musselFlash = GameObject.Find("P1MusselFlash");
+            this.musselFlash.SetActive(false);
+
+            for (int i = 0; i < 6; i++) {
+
+                l_Health.Add(GameObject.Find("P1Health" + i).GetComponent<Image>());
+                l_Ammo.Add(GameObject.Find("P1Ammo" + i).GetComponent<Image>());
+
+            }
+
+            this._healthIdx = l_Health.Count;
+            this._ammoIdx = l_Ammo.Count;
 
             playerCanvas = GameObject.Find("CanvasP1");
 
@@ -76,14 +101,30 @@ public class PlayerController : MonoBehaviour {
             bulletOffsetLeft = p2gunLeft.position;
             bulletOffsetRight = p2gunRight.position;
 
+            audioSource = this.gameObject.GetComponent<AudioSource>();
+
             _bullets = new List<GameObject>();
+            l_Health = new List<Image>();
+            l_Ammo = new List<Image>();
+
+            musselFlash = GameObject.Find("P2MusselFlash");
+            this.musselFlash.SetActive(false);
+
+            for (int i = 0; i < 6; i++)
+            {
+
+                l_Health.Add(GameObject.Find("P2Health" + i).GetComponent<Image>());
+                l_Ammo.Add(GameObject.Find("P2Ammo" + i).GetComponent<Image>());
+
+            }
+
+            this._healthIdx = l_Health.Count;
+            this._ammoIdx = l_Ammo.Count;
 
             playerCanvas = GameObject.Find("CanvasP2");
 
         }
 
-        ammoText = GameObject.Find(this.gameObject.tag + "ammo").GetComponent<Text>();
-        healthText = GameObject.Find(this.gameObject.tag + "life").GetComponent<Text>();
         gameOverPanel = GameObject.Find("Canvas").transform.Find("GameOverPanel").gameObject;
 
         animator = GetComponent<Animator>();
@@ -98,9 +139,6 @@ public class PlayerController : MonoBehaviour {
 
         _bulletRotation = this.transform.rotation;
         _bulletRotationRight = this.transform.rotation;
-
-        ammoText.text = ammo.ToString();
-        healthText.text = health.ToString();
 
         Movement();
 
@@ -152,6 +190,9 @@ public class PlayerController : MonoBehaviour {
 
                 health -= 1;
 
+                this.l_Health[_healthIdx - 1].enabled = false;
+                _healthIdx -= 1;
+
                 playerCanvas.transform.Find("Image").GetComponent<Image>().enabled = true;
                 StartCoroutine(OofWait());
                 
@@ -164,6 +205,12 @@ public class PlayerController : MonoBehaviour {
         if (collision.collider.tag == "DATRAINKILLEDMEH") {
 
             health -= 3;
+            this.l_Health[_healthIdx - 1].enabled = false;
+            _healthIdx -= 1;
+            this.l_Health[_healthIdx - 1].enabled = false;
+            _healthIdx -= 1;
+            this.l_Health[_healthIdx - 1].enabled = false;
+            _healthIdx -= 1;
             Death();
 
         }
@@ -238,13 +285,28 @@ public class PlayerController : MonoBehaviour {
 
             animator.SetTrigger("Shoot");
 
+            this.musselFlash.SetActive(true);
+            StartCoroutine(MusselWait());
+
+            this.audioSource.PlayOneShot(revShot, 0.02f);
+
             ammo--;
+
+            this.l_Ammo[_ammoIdx - 1].enabled = false;
+            _ammoIdx -= 1;
 
             this._bullets.Add(Instantiate(Bullet, bulletOffsetMid, _bulletRotation));
 
             StartCoroutine(FireRate(fireRateMultiplyer));
 
         }
+
+    }
+
+    IEnumerator MusselWait() {
+
+        yield return new WaitForSecondsRealtime(0.1f);
+        this.musselFlash.SetActive(false);
 
     }
 
@@ -287,6 +349,11 @@ public class PlayerController : MonoBehaviour {
         while (ammo < 6) {
 
             ammo++;
+
+            this.audioSource.PlayOneShot(reload, 1);
+
+            this.l_Ammo[_ammoIdx].enabled = true;
+            _ammoIdx += 1;
 
             animator.SetTrigger("Reload");
 
@@ -332,6 +399,13 @@ public class PlayerController : MonoBehaviour {
         rapidFireActive = true;
 
         ammo = 6;
+        foreach (Image image in l_Ammo)
+        {
+
+            image.enabled = true;
+
+        }
+        _ammoIdx = l_Ammo.Count;
 
         fireRateMultiplyer -= rapidFireModifier;
 
@@ -344,6 +418,12 @@ public class PlayerController : MonoBehaviour {
         if (ammo < 6 && dontDo == false) {
 
             ammo = 6;
+            foreach (Image image in l_Ammo) {
+
+                image.enabled = true;
+
+            }
+            _ammoIdx = l_Ammo.Count;
             dontDo = true;
 
         }
@@ -352,7 +432,19 @@ public class PlayerController : MonoBehaviour {
 
             animator.SetTrigger("Shoot");
 
+            this.musselFlash.SetActive(true);
+            StartCoroutine(MusselWait());
+
+            this.audioSource.PlayOneShot(shotGun, 0.5f);
+
             ammo -= 3;
+
+            this.l_Ammo[_ammoIdx - 1].enabled = false;
+            _ammoIdx -= 1;
+            this.l_Ammo[_ammoIdx - 1].enabled = false;
+            _ammoIdx -= 1;
+            this.l_Ammo[_ammoIdx - 1].enabled = false;
+            _ammoIdx -= 1;
 
             this._bullets.Add(Instantiate(Bullet, bulletOffsetMid, _bulletRotation));
             this._bullets.Add(Instantiate(Bullet, bulletOffsetLeft, _bulletRotation *= Quaternion.Euler(0, -10, 0)));
