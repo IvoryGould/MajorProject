@@ -33,6 +33,7 @@ public class GameManager : MonoBehaviour {
     public void Play() {
 
         SceneManager.LoadScene("Level-1");
+        Time.timeScale = 1;
 
     }
 

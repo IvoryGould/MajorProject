@@ -41,6 +41,8 @@ public class PlayerController : MonoBehaviour {
 
     public GameObject playerCanvas;
 
+    public Image ShotgunIcon;
+
     Quaternion _bulletRotation;
     Quaternion _bulletRotationRight;
 
@@ -94,6 +96,7 @@ public class PlayerController : MonoBehaviour {
             this._ammoIdx = l_Ammo.Count;
 
             playerCanvas = GameObject.Find("CanvasP1");
+            ShotgunIcon = playerCanvas.transform.Find("PickupShotgun").GetComponent<Image>();
 
         } else if (this.gameObject.tag == "P2") {
 
@@ -122,6 +125,7 @@ public class PlayerController : MonoBehaviour {
             this._ammoIdx = l_Ammo.Count;
 
             playerCanvas = GameObject.Find("CanvasP2");
+            // = playerCanvas.transform.Find("PickupShotgun").GetComponent<Image>();
 
         }
 
@@ -139,6 +143,12 @@ public class PlayerController : MonoBehaviour {
 
         _bulletRotation = this.transform.rotation;
         _bulletRotationRight = this.transform.rotation;
+
+        if (this.health > 6) {
+
+            this.health = 6;
+
+        }
 
         Movement();
 
@@ -193,7 +203,7 @@ public class PlayerController : MonoBehaviour {
                 this.l_Health[_healthIdx - 1].enabled = false;
                 _healthIdx -= 1;
 
-                playerCanvas.transform.Find("Image").GetComponent<Image>().enabled = true;
+                playerCanvas.transform.Find("OOF").GetComponent<Image>().enabled = true;
                 StartCoroutine(OofWait());
                 
                 Death();
@@ -337,7 +347,7 @@ public class PlayerController : MonoBehaviour {
 
         isReloading = true;
 
-        
+        this.ShotgunIcon.enabled = false;
 
         this.shotgunActive = false;
         this.runShotgun = false;
@@ -379,7 +389,7 @@ public class PlayerController : MonoBehaviour {
     IEnumerator OofWait() {
 
         yield return new WaitForSecondsRealtime(0.2f);
-        playerCanvas.transform.Find("Image").GetComponent<Image>().enabled = false;
+        playerCanvas.transform.Find("OOF").GetComponent<Image>().enabled = false;
 
     }
 
@@ -413,7 +423,7 @@ public class PlayerController : MonoBehaviour {
 
     public void ShotgunShoot() {
 
-
+        this.ShotgunIcon.enabled = true;
 
         if (ammo < 6 && dontDo == false) {
 

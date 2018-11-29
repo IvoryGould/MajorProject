@@ -3,7 +3,7 @@ SceneListBegin?
 Assets/Scenes/MainMenu.unity
 Assets/Scenes/Level-1.unity
 SceneListEnd?
-42c8ab6d1f509232c4407f203bb35787 Assembly-CSharp.dll:.PlayerController
+b107c4bf8186e3db7bdae16f5aa177e6 Assembly-CSharp.dll:.PlayerController
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
 970a95104359198fe1a98ef48655de8c UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationTrack
 8144169769d51429c4aedc8b0f92d47b UnityEngine.Timeline.dll:UnityEngine.Timeline.AnimationPlayableAsset
@@ -150,5 +150,5 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 9de3a22eca9aefadba2d10d5987cefe3 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 787ce2694d7274d6c43177c591da681d Assembly-CSharp.dll:.Bandage
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.tester
+3c4a395c97b7aa73a4b3070475c2a29d Assembly-CSharp.dll:.GameUi
 d89fe7b7017b9d7a0fd8af693e6dd553 Assembly-CSharp.dll:.Train
-0b76abd2a741123ccc068950dd587205 Assembly-CSharp.dll:.GameUi

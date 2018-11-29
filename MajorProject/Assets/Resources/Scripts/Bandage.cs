@@ -17,12 +17,12 @@ public class Bandage : MonoBehaviour
         playerTwo = GameObject.Find("Player2").GetComponent<PlayerController>();
 
     }
-
-    private void OnCollisionEnter(Collision collision) {
+    
+    void OnTriggerEnter(Collider collision) {
 
         playerObj = collision.gameObject;
 
-        if (collision.collider.tag == "P1" || collision.collider.tag == "P2")
+        if (collision.tag == "P1" || collision.tag == "P2")
         {
 
             PickUp();

@@ -24,14 +24,14 @@ public class Train : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        if (this.name == "Train1" && this.transform.position == new Vector3(0, 1, 40))
+        if (this.name == "Train1" && this.transform.position == new Vector3(0, 3, 40))
         {
 
             this.transform.rotation = Quaternion.Euler(0, 180, 0);
             StartCoroutine(Timer());
 
         }
-        else if (this.name == "Train2" && this.transform.position == new Vector3(30, 1, 0))
+        else if (this.name == "Train2" && this.transform.position == new Vector3(30, 3, 0))
         {
 
             this.transform.rotation = Quaternion.Euler(0, -90, 0);

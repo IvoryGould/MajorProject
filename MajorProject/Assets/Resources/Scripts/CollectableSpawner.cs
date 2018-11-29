@@ -33,9 +33,9 @@ public class CollectableSpawner : MonoBehaviour {
     void CollectableSpawn()
     {
 
-        Instantiate(collectables[collectableIndex], new Vector3(this.transform.position.x, 2, this.transform.position.z), Quaternion.identity, this.transform);
-        int lastChildIndex = this.transform.childCount - 1;
-        this.transform.GetChild(lastChildIndex).transform.localScale = new Vector3(0.5f, 1, 0.5f);
+        Instantiate(collectables[collectableIndex], new Vector3(this.transform.position.x, 4, this.transform.position.z + 7.5f), Quaternion.identity, this.transform);
+
+        //this.transform.GetChild(lastChildIndex).transform.localScale = new Vector3(0.5f, 1, 0.5f);
 
     }
 
@@ -44,7 +44,7 @@ public class CollectableSpawner : MonoBehaviour {
         if (collision.gameObject.tag == "Bullet") {
 
             Destroy(collision.gameObject);
-            Destroy(this.transform.GetChild(0).gameObject);
+            Destroy(this.transform.GetChild(4).gameObject);
             Instantiate(collectables[collectableIndex], new Vector3(this.transform.position.x, 1, this.transform.position.z), Quaternion.identity);
 
         }

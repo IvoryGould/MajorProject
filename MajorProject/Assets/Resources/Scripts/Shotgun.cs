@@ -30,11 +30,11 @@ public class Shotgun : MonoBehaviour {
 
     }
 
-    private void OnCollisionEnter(Collision collision) {
+    private void OnTriggerEnter(Collider collision) {
 
         playerObj = collision.gameObject;
 
-        if (collision.collider.tag == "P1" || collision.collider.tag == "P2") {
+        if (collision.tag == "P1" || collision.tag == "P2") {
 
             PickUp();
 

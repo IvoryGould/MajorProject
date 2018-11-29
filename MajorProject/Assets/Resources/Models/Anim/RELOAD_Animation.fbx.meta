@@ -1,0 +1,176 @@
+fileFormatVersion: 2
+guid: 1f8757101ab80d5479ddae26b97c52e8
+timeCreated: 1543465279
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Shotgun_04:pCube3
+    100004: SM_Cowboy_FINAL:Head_J
+    100006: SM_Cowboy_FINAL:HeadTip_J
+    100008: SM_Cowboy_FINAL:Hip_J
+    100010: SM_Cowboy_FINAL:L_Clavicle_J
+    100012: SM_Cowboy_FINAL:L_Elbow_J
+    100014: SM_Cowboy_FINAL:L_Fingers_J
+    100016: SM_Cowboy_FINAL:L_Foot_J
+    100018: SM_Cowboy_FINAL:L_Knee_J
+    100020: SM_Cowboy_FINAL:L_LegTop_J
+    100022: SM_Cowboy_FINAL:L_Shoulder_J
+    100024: SM_Cowboy_FINAL:L_Thumb_J
+    100026: SM_Cowboy_FINAL:L_Toe_J
+    100028: SM_Cowboy_FINAL:L_ToeTip_J
+    100030: SM_Cowboy_FINAL:L_Wrist_J
+    100032: SM_Cowboy_FINAL:Neck_J
+    100034: SM_Cowboy_FINAL:R_Clavicle_J
+    100036: SM_Cowboy_FINAL:R_Elbow_J
+    100038: SM_Cowboy_FINAL:R_Fingers_J
+    100040: SM_Cowboy_FINAL:R_Foot_J
+    100042: SM_Cowboy_FINAL:R_Knee_J
+    100044: SM_Cowboy_FINAL:R_LegTop_J
+    100046: SM_Cowboy_FINAL:R_Shoulder_J
+    100048: SM_Cowboy_FINAL:R_Thumb_J
+    100050: SM_Cowboy_FINAL:R_Toe_J
+    100052: SM_Cowboy_FINAL:R_ToeTip_J
+    100054: SM_Cowboy_FINAL:R_Wrist_J
+    100056: SM_Cowboy_FINAL:sm_cowboy_body
+    100058: SM_Cowboy_FINAL:Spine01_J
+    100060: SM_Cowboy_FINAL:Spine02_J
+    100062: SM_Cowboy_Hat:Hat
+    100064: SM_Cowboy_Hat:Hat_JNT
+    100066: SM_Cowboy_Hat:SM_Cowboy_Hat
+    100068: SM_Revolver:Revolver_JNT
+    100070: SM_Revolver:SM_Revolver
+    100072: SM_Revolver:SM_revolver
+    400000: //RootNode
+    400002: Shotgun_04:pCube3
+    400004: SM_Cowboy_FINAL:Head_J
+    400006: SM_Cowboy_FINAL:HeadTip_J
+    400008: SM_Cowboy_FINAL:Hip_J
+    400010: SM_Cowboy_FINAL:L_Clavicle_J
+    400012: SM_Cowboy_FINAL:L_Elbow_J
+    400014: SM_Cowboy_FINAL:L_Fingers_J
+    400016: SM_Cowboy_FINAL:L_Foot_J
+    400018: SM_Cowboy_FINAL:L_Knee_J
+    400020: SM_Cowboy_FINAL:L_LegTop_J
+    400022: SM_Cowboy_FINAL:L_Shoulder_J
+    400024: SM_Cowboy_FINAL:L_Thumb_J
+    400026: SM_Cowboy_FINAL:L_Toe_J
+    400028: SM_Cowboy_FINAL:L_ToeTip_J
+    400030: SM_Cowboy_FINAL:L_Wrist_J
+    400032: SM_Cowboy_FINAL:Neck_J
+    400034: SM_Cowboy_FINAL:R_Clavicle_J
+    400036: SM_Cowboy_FINAL:R_Elbow_J
+    400038: SM_Cowboy_FINAL:R_Fingers_J
+    400040: SM_Cowboy_FINAL:R_Foot_J
+    400042: SM_Cowboy_FINAL:R_Knee_J
+    400044: SM_Cowboy_FINAL:R_LegTop_J
+    400046: SM_Cowboy_FINAL:R_Shoulder_J
+    400048: SM_Cowboy_FINAL:R_Thumb_J
+    400050: SM_Cowboy_FINAL:R_Toe_J
+    400052: SM_Cowboy_FINAL:R_ToeTip_J
+    400054: SM_Cowboy_FINAL:R_Wrist_J
+    400056: SM_Cowboy_FINAL:sm_cowboy_body
+    400058: SM_Cowboy_FINAL:Spine01_J
+    400060: SM_Cowboy_FINAL:Spine02_J
+    400062: SM_Cowboy_Hat:Hat
+    400064: SM_Cowboy_Hat:Hat_JNT
+    400066: SM_Cowboy_Hat:SM_Cowboy_Hat
+    400068: SM_Revolver:Revolver_JNT
+    400070: SM_Revolver:SM_Revolver
+    400072: SM_Revolver:SM_revolver
+    2100000: SM_Cowboy_FINAL_cowboy_TX
+    2100002: SM_Cowboy_Hat_sm_cowboy_hat
+    2100004: SM_Revolver_sm_revolver_initialShadingGroup1
+    2100006: lambert1
+    2300000: Shotgun_04:pCube3
+    3300000: Shotgun_04:pCube3
+    4300000: SM_Cowboy_FINAL:sm_cowboy_body
+    4300002: SM_Cowboy_Hat:SM_Cowboy_Hat
+    4300004: SM_Revolver:SM_revolver
+    4300006: Shotgun_04:pCube3
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: SM_Cowboy_FINAL:sm_cowboy_body
+    13700002: SM_Cowboy_Hat:SM_Cowboy_Hat
+    13700004: SM_Revolver:SM_revolver
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

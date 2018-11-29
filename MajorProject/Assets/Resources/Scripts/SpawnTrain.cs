@@ -30,14 +30,14 @@ public class SpawnTrain : MonoBehaviour {
 
         if (GameObject.Find("Train1") == false) {
 
-            Instantiate(train, new Vector3(0, 1, 40), Quaternion.identity);
+            Instantiate(train, new Vector3(0, 3, 40), Quaternion.identity);
             GameObject.Find("Train(Clone)").name = "Train1";
             
         }
 
         if (GameObject.Find("Train2") == false) {
 
-            Instantiate(train, new Vector3(30, 1, 0), Quaternion.identity);
+            Instantiate(train, new Vector3(30, 3, 0), Quaternion.identity);
             GameObject.Find("Train(Clone)").name = "Train2";
 
         }

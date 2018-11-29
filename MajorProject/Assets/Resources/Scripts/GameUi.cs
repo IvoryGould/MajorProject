@@ -70,9 +70,16 @@ public class GameUi : MonoBehaviour {
 
     IEnumerator CountDown() {
 
-        yield return new WaitForSecondsRealtime(1);
-        countNum -= 1;
-        countDown.text = "" + countNum;
+        while (countNum != 0) {
+
+            yield return new WaitForSecondsRealtime(1);
+            countNum -= 1;
+            countDown.text = "" + countNum;
+
+        }
+
+        Time.timeScale = 1.0f;
+        countDown.enabled = false;
 
     }
 
