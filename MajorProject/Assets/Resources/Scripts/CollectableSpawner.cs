@@ -8,12 +8,18 @@ public class CollectableSpawner : MonoBehaviour {
 
     public List<GameObject> collectables = new List<GameObject>();
 
+    public PlayerController playerOne;
+    public PlayerController playerTwo;
+
     void Awake()
     {
 
         collectables.Add(Resources.Load<GameObject>("Prefabs/blue"));
         collectables.Add(Resources.Load<GameObject>("Prefabs/red"));
         collectables.Add(Resources.Load<GameObject>("Prefabs/yellow"));
+
+        playerOne = GameObject.Find("Player1").GetComponent<PlayerController>();
+        playerTwo = GameObject.Find("Player2").GetComponent<PlayerController>();
 
     }
 
@@ -43,8 +49,21 @@ public class CollectableSpawner : MonoBehaviour {
 
         if (collision.gameObject.tag == "Bullet") {
 
+            if (playerOne._bullets.Contains(collision.gameObject))
+            {
+
+                playerOne._bullets.Remove(collision.gameObject);
+
+            }
+            else if (playerTwo._bullets.Contains(collision.gameObject))
+            {
+
+                playerTwo._bullets.Remove(collision.gameObject);
+
+            }
+
             Destroy(collision.gameObject);
-            Destroy(this.transform.GetChild(4).gameObject);
+            Destroy(this.transform.GetChild(5).gameObject);
             Instantiate(collectables[collectableIndex], new Vector3(this.transform.position.x, 1, this.transform.position.z), Quaternion.identity);
 
         }

@@ -10,6 +10,8 @@ public class PlayerController : MonoBehaviour {
     public float fireRateMultiplyer = 0.5f;
     public float rapidFireModifier = 0.25f;
 
+    PlayerController otherPlayer;
+
     public AudioSource audioSource;
     public AudioClip revShot;
     public AudioClip shotGun;
@@ -42,6 +44,8 @@ public class PlayerController : MonoBehaviour {
     public GameObject playerCanvas;
 
     public Image ShotgunIcon;
+    public Image RapiadIcon;
+    public Image BandageIcon;
 
     Quaternion _bulletRotation;
     Quaternion _bulletRotationRight;
@@ -76,6 +80,8 @@ public class PlayerController : MonoBehaviour {
             bulletOffsetLeft = p1gunLeft.position;
             bulletOffsetRight = p1gunRight.position;
 
+            otherPlayer = GameObject.Find("Player2").GetComponent<PlayerController>();
+
             audioSource = this.gameObject.GetComponent<AudioSource>();
 
             _bullets = new List<GameObject>();
@@ -97,12 +103,16 @@ public class PlayerController : MonoBehaviour {
 
             playerCanvas = GameObject.Find("CanvasP1");
             ShotgunIcon = playerCanvas.transform.Find("PickupShotgun").GetComponent<Image>();
+            RapiadIcon = playerCanvas.transform.Find("PickupRapidFire").GetComponent<Image>();
+            BandageIcon = playerCanvas.transform.Find("PickupBandage").GetComponent<Image>();
 
         } else if (this.gameObject.tag == "P2") {
 
             bulletOffsetMid = p2gunMid.position;
             bulletOffsetLeft = p2gunLeft.position;
             bulletOffsetRight = p2gunRight.position;
+
+            otherPlayer = GameObject.Find("Player1").GetComponent<PlayerController>();
 
             audioSource = this.gameObject.GetComponent<AudioSource>();
 
@@ -125,11 +135,14 @@ public class PlayerController : MonoBehaviour {
             this._ammoIdx = l_Ammo.Count;
 
             playerCanvas = GameObject.Find("CanvasP2");
-            // = playerCanvas.transform.Find("PickupShotgun").GetComponent<Image>();
+            ShotgunIcon = playerCanvas.transform.Find("PickupShotgun").GetComponent<Image>();
+            RapiadIcon = playerCanvas.transform.Find("PickupRapidFire").GetComponent<Image>();
+            BandageIcon = playerCanvas.transform.Find("PickupBandage").GetComponent<Image>();
 
         }
 
         gameOverPanel = GameObject.Find("Canvas").transform.Find("GameOverPanel").gameObject;
+        gameOverPanel.SetActive(false);
 
         animator = GetComponent<Animator>();
 
@@ -140,6 +153,7 @@ public class PlayerController : MonoBehaviour {
 
         playerCanvas.GetComponent<RectTransform>().position = new Vector3(this.transform.position.x + 2, this.transform.position.y + 3, this.transform.position.z);
 
+        Death();
 
         _bulletRotation = this.transform.rotation;
         _bulletRotationRight = this.transform.rotation;
@@ -165,6 +179,16 @@ public class PlayerController : MonoBehaviour {
             bulletOffsetLeft = p1gunLeft.position;
             bulletOffsetRight = p1gunRight.position;
 
+            //for (int i = 0; i < _bullets.Count; i++) {
+
+            //    if (this._bullets[i].gameObject != Bullet) {
+
+            //        this._bullets.RemoveAt(i);
+
+            //    }
+
+            //}
+
         }
         else if (this.gameObject.tag == "P2")
         {
@@ -172,6 +196,16 @@ public class PlayerController : MonoBehaviour {
             bulletOffsetMid = p2gunMid.position;
             bulletOffsetLeft = p2gunLeft.position;
             bulletOffsetRight = p2gunRight.position;
+
+            //for (int i = 0; i < _bullets.Count; i++) {
+
+            //    if (this._bullets[i].gameObject != Bullet) {
+
+            //        this._bullets.RemoveAt(i);
+
+            //    }
+
+            //}
 
         }
 
@@ -194,9 +228,8 @@ public class PlayerController : MonoBehaviour {
 
         if (collision.collider.tag == "Bullet") {
 
-            Destroy(collision.gameObject);
-
-            if (this._bullets.Contains(collision.collider.gameObject) == false) {
+            if (this._bullets.Contains(collision.collider.gameObject) == false)
+            {
 
                 health -= 1;
 
@@ -205,11 +238,23 @@ public class PlayerController : MonoBehaviour {
 
                 playerCanvas.transform.Find("OOF").GetComponent<Image>().enabled = true;
                 StartCoroutine(OofWait());
-                
-                Death();
 
             }
-            
+
+            if (!this._bullets.Contains(collision.gameObject))
+            {
+
+                otherPlayer._bullets.Remove(collision.gameObject);
+
+            }
+            else if (this._bullets.Contains(collision.gameObject)) {
+
+                this._bullets.Remove(collision.gameObject);
+
+            }
+
+            Destroy(collision.gameObject);
+
         }
 
         if (collision.collider.tag == "DATRAINKILLEDMEH") {
@@ -221,7 +266,6 @@ public class PlayerController : MonoBehaviour {
             _healthIdx -= 1;
             this.l_Health[_healthIdx - 1].enabled = false;
             _healthIdx -= 1;
-            Death();
 
         }
 
@@ -298,7 +342,7 @@ public class PlayerController : MonoBehaviour {
             this.musselFlash.SetActive(true);
             StartCoroutine(MusselWait());
 
-            this.audioSource.PlayOneShot(revShot, 0.02f);
+            this.audioSource.PlayOneShot(revShot, 0.1f);
 
             ammo--;
 
@@ -348,6 +392,7 @@ public class PlayerController : MonoBehaviour {
         isReloading = true;
 
         this.ShotgunIcon.enabled = false;
+        this.RapiadIcon.enabled = false;
 
         this.shotgunActive = false;
         this.runShotgun = false;
@@ -378,10 +423,11 @@ public class PlayerController : MonoBehaviour {
 
     }
 
-    IEnumerator WaitShotgun() {
+    IEnumerator WaitBandageFlash() {
 
 
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSecondsRealtime(1);
+        this.BandageIcon.enabled = false;
 
 
     }
@@ -407,6 +453,8 @@ public class PlayerController : MonoBehaviour {
     public void RapidBuff() {
 
         rapidFireActive = true;
+
+        this.RapiadIcon.enabled = true;
 
         ammo = 6;
         foreach (Image image in l_Ammo)
@@ -442,6 +490,8 @@ public class PlayerController : MonoBehaviour {
 
             animator.SetTrigger("Shoot");
 
+            //BulletTrailColour();
+
             this.musselFlash.SetActive(true);
             StartCoroutine(MusselWait());
 
@@ -466,27 +516,40 @@ public class PlayerController : MonoBehaviour {
 
     }
 
-    void BulletTrailColour() {
+    public void BandageFeedback()
+    {
 
-        if (this.gameObject.tag == "P1") {
+        this.BandageIcon.enabled = true;
+        StartCoroutine(WaitBandageFlash());
 
-            foreach (GameObject bullet in this._bullets) {
+    }
 
-                Bullet.GetComponent<TrailRenderer>().material = Resources.Load("Materials/P2Red") as Material;
+    void BulletTrailColour()
+    {
+
+        if (this.gameObject.tag == "P1")
+        {
+
+            foreach (GameObject bullet in this._bullets)
+            {
+
+                bullet.GetComponent<TrailRenderer>().material = Resources.Load("Materials/P1Blue") as Material;
 
             }
 
         }
-        else if (this.gameObject.tag == "P2") {
+        else if (this.gameObject.tag == "P2")
+        {
 
-            foreach (GameObject bullet in this._bullets) {
+            foreach (GameObject bullet in this._bullets)
+            {
 
-                Bullet.GetComponent<TrailRenderer>().material = Resources.Load("Materials/P1Blue") as Material;
+                bullet.GetComponent<TrailRenderer>().material = Resources.Load("Materials/P2Red") as Material;
 
             }
 
         }
 
     }
-    
+
 }

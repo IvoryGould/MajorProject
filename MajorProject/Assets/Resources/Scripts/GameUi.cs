@@ -9,7 +9,9 @@ public class GameUi : MonoBehaviour {
     public PlayerController playerOne;
     public PlayerController playerTwo;
 
-    public Text roundEndText;
+    public Image roundEndText;
+    public Sprite blueWins;
+    public Sprite redWins;
     public Text countDown;
     int countNum = 3;
 
@@ -19,7 +21,7 @@ public class GameUi : MonoBehaviour {
 
         playerOne = GameObject.Find("Player1").GetComponent<PlayerController>();
         playerTwo = GameObject.Find("Player2").GetComponent<PlayerController>();
-        roundEndText = GameObject.Find("GameOverText").GetComponent<Text>();
+        roundEndText = GameObject.Find("GameOverPanel").GetComponent<Image>();
         countDown = GameObject.Find("CountDownText").GetComponent<Text>();
 
         gameOverPanel = GameObject.Find("GameOverPanel");
@@ -30,7 +32,6 @@ public class GameUi : MonoBehaviour {
     void Start () {
 
         gameOverPanel.SetActive(false);
-        Time.timeScale = 0.0f;
 
         countDown.text = "" + countNum;
 
@@ -43,17 +44,21 @@ public class GameUi : MonoBehaviour {
 
         if (playerOne.health == 0) {
 
-            roundEndText.text = "Player 2 Won";
+            roundEndText.sprite = redWins;
+            Time.timeScale = 0.0f;
+
 
         }
 
         if (playerTwo.health == 0) {
 
-            roundEndText.text = "Player 1 Won";
+            roundEndText.sprite = blueWins;
+            Time.timeScale = 0.0f;
+
 
         }
 
-	}
+    }
 
     public void PlayAgain() {
 
@@ -69,6 +74,8 @@ public class GameUi : MonoBehaviour {
     }
 
     IEnumerator CountDown() {
+
+        Time.timeScale = 0;
 
         while (countNum != 0) {
 

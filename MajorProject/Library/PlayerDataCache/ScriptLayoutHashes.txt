@@ -3,7 +3,7 @@ SceneListBegin?
 Assets/Scenes/MainMenu.unity
 Assets/Scenes/Level-1.unity
 SceneListEnd?
-b107c4bf8186e3db7bdae16f5aa177e6 Assembly-CSharp.dll:.PlayerController
+76bc7f128cce51ad136cf3ea9b2966ea Assembly-CSharp.dll:.PlayerController
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
 970a95104359198fe1a98ef48655de8c UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationTrack
 8144169769d51429c4aedc8b0f92d47b UnityEngine.Timeline.dll:UnityEngine.Timeline.AnimationPlayableAsset
@@ -109,8 +109,8 @@ e9bdabf9265d758d56f01bb188916fa8 UnityEngine.Networking.dll:UnityEngine.Networki
 528ea1fd7c01796fc60c4e2f172ea229 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
 9de3a22eca9aefadba2d10d5987cefe3 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 787ce2694d7274d6c43177c591da681d Assembly-CSharp.dll:.Shotgun
-c3b7b977138d5af6e460067c3d1a9e0a Assembly-CSharp.dll:.Bullet
-f84ac55b28b625c97fb75694891edd6a Assembly-CSharp.dll:.CollectableSpawner
+52e3ce6cedcaf6eba93786cde76d49e7 Assembly-CSharp.dll:.Bullet
+95f27d1f83e16ad610f58abc3b622657 Assembly-CSharp.dll:.CollectableSpawner
 322cb40e1e282f28af980cbef7922a90 UnityEngine.Analytics.dll:UnityEngine.Analytics.AnalyticsEventTracker
 dc07d7ad69b399a46e92c483bf1c04ca UnityEngine.Analytics.dll:UnityEngine.Analytics.AnalyticsTracker
 bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.AudioSpatializerMicrosoft
@@ -150,5 +150,5 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 9de3a22eca9aefadba2d10d5987cefe3 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 787ce2694d7274d6c43177c591da681d Assembly-CSharp.dll:.Bandage
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.tester
-3c4a395c97b7aa73a4b3070475c2a29d Assembly-CSharp.dll:.GameUi
-d89fe7b7017b9d7a0fd8af693e6dd553 Assembly-CSharp.dll:.Train
+89abe96db7d7cfd4670906b57b349e2e Assembly-CSharp.dll:.GameUi
+9cc21ba639ce1b73c979d1296964d4e1 Assembly-CSharp.dll:.Train

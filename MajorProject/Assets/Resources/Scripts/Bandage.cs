@@ -38,6 +38,7 @@ public class Bandage : MonoBehaviour
         if (playerObj.tag == "P1" && playerOne.health != 6) {
 
             playerOne.health += 1;
+            playerOne.BandageFeedback();
             playerOne.l_Health[playerOne._healthIdx].enabled = true;
             playerOne._healthIdx += 1;
 
@@ -45,6 +46,7 @@ public class Bandage : MonoBehaviour
         else if (playerObj.tag == "P2" && playerTwo.health != 6) {
 
             playerTwo.health += 1;
+            playerTwo.BandageFeedback();
             playerTwo.l_Health[playerTwo._healthIdx].enabled = true;
             playerTwo._healthIdx += 1;
 

@@ -6,7 +6,9 @@ public class Train : MonoBehaviour {
 
     public float moveSpeed = 5;
     float timerNum;
-    public float timerMax = 20;
+    public float timerMax = 23;
+    public AudioSource audioSource;
+    public AudioClip trainSounds;
 
     void Awake() {
 
@@ -17,21 +19,21 @@ public class Train : MonoBehaviour {
     // Use this for initialization
     void Start () {
 
-        timerNum = Random.Range(6, timerMax);
+        timerNum = Random.Range(9, timerMax);
 
     }
 	
 	// Update is called once per frame
 	void Update () {
 
-        if (this.name == "Train1" && this.transform.position == new Vector3(0, 3, 40))
+        if (this.name == "Train1" && this.transform.position == new Vector3(0, 3, 90))
         {
 
             this.transform.rotation = Quaternion.Euler(0, 180, 0);
             StartCoroutine(Timer());
 
         }
-        else if (this.name == "Train2" && this.transform.position == new Vector3(30, 3, 0))
+        else if (this.name == "Train2" && this.transform.position == new Vector3(80, 3, 0))
         {
 
             this.transform.rotation = Quaternion.Euler(0, -90, 0);
@@ -43,6 +45,7 @@ public class Train : MonoBehaviour {
 
     void Movement() {
 
+        this.audioSource.PlayOneShot(trainSounds);
         this.transform.Translate(0, 0 , (moveSpeed * Time.deltaTime));
 
     }
