@@ -45,7 +45,7 @@ public class Train : MonoBehaviour {
 
     void Movement() {
 
-        this.audioSource.PlayOneShot(trainSounds);
+        //this.audioSource.PlayOneShot(trainSounds);
         this.transform.Translate(0, 0 , (moveSpeed * Time.deltaTime));
 
     }

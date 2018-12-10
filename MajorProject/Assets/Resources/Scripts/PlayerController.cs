@@ -67,7 +67,7 @@ public class PlayerController : MonoBehaviour {
     public bool hasPickUp = false;
     public bool rapidFireActive = false;
 
-    bool dash = true;
+    //bool dash = true;
 
     public List<GameObject> _bullets;
 
@@ -288,13 +288,13 @@ public class PlayerController : MonoBehaviour {
 
 
         //DASH
-        if (Input.GetButtonDown("Dash" + this.gameObject.tag) && dash == true) {
+        //if (Input.GetButtonDown("Dash" + this.gameObject.tag) && dash == true) {
 
-            this.transform.Translate(Vector3.forward * 5, Space.Self);
+        //    this.transform.Translate(Vector3.forward * 5, Space.Self);
 
-            StartCoroutine(DashCoolDown());
+        //    StartCoroutine(DashCoolDown());
 
-        }
+        //}
 
         animator.SetFloat("moving", moveH);
         animator.SetFloat("movingH", moveV);
@@ -364,14 +364,14 @@ public class PlayerController : MonoBehaviour {
 
     }
 
-    IEnumerator DashCoolDown() {
+    //IEnumerator DashCoolDown() {
 
-        dash = false;
-        yield return new WaitForSecondsRealtime(3);
-        dash = true;
+    //    dash = false;
+    //    yield return new WaitForSecondsRealtime(3);
+    //    dash = true;
 
 
-    }
+    //}
 
     IEnumerator FireRate(float rate)
     {

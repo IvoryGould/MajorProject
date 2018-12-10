@@ -1697,7 +1697,7 @@ AudioSource:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1749417201453586}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
@@ -1783,6 +1783,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collectables: []
+  playerOne: {fileID: 0}
+  playerTwo: {fileID: 0}
 --- !u!114 &114660209517983486
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1810,6 +1812,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collectables: []
+  playerOne: {fileID: 0}
+  playerTwo: {fileID: 0}
 --- !u!114 &114805139119332872
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1822,6 +1826,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collectables: []
+  playerOne: {fileID: 0}
+  playerTwo: {fileID: 0}
 --- !u!198 &198260338606459304
 ParticleSystem:
   m_ObjectHideFlags: 1
